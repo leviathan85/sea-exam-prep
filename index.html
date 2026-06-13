@@ -397,7 +397,7 @@
       <div class="mode-icon">🎯</div>
       <div>
         <h2>Quick Drill</h2>
-        <p>10-question adaptive sessions. The app tracks what you know and keeps throwing your weak spots back at you until you own them.</p>
+        <p>10 adaptive questions drawn from all sections. The app learns what you know and prioritizes your weak areas every session.</p>
         <span class="badge badge-drill">Adaptive</span>
       </div>
     </div>
@@ -822,7 +822,9 @@ function renderQuestion() {
   const isLast     = currentIdx === total - 1;
 
   document.getElementById('q-counter').textContent = `Question ${currentIdx+1} of ${total}`;
-  document.getElementById('q-section').textContent = q.section;
+  const secLabel = document.getElementById('q-section');
+  secLabel.textContent = q.section;
+  secLabel.style.display = mode === 'study' ? '' : 'none';
   document.getElementById('q-type-label').textContent = q.type === 'mcq' ? 'Multiple Choice' : 'True / False';
   document.getElementById('question-text').textContent = q.question;
   document.getElementById('progress-fill').style.width = ((currentIdx/total)*100) + '%';
