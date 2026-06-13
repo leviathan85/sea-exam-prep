@@ -320,7 +320,7 @@
       </div>
     </div>
 
-    <div class="mode-card" onclick="showSectionPicker('drill')">
+    <div class="mode-card" onclick="startDrill()">
       <div class="mode-icon">🎯</div>
       <div>
         <h2>Quick Drill</h2>
@@ -612,16 +612,28 @@ function startSession() {
     .filter(({ q }) => selectedSections.has(q.section));
 
   if (mode === 'drill') {
-    const weights = pool.map(({ i }) => drillWeight(i));
-    const picked = weightedSample(pool, weights, 10);
-    sessionQueue = picked.map(({ q }) => q);
-    // store index alongside for drill tracking
+    const drillData = getDrill();
+    const hasHistory = pool.some(({ i }) => drillData[i]);
+    let picked;
+    if (hasHistory) {
+      const weights = pool.map(({ i }) => drillWeight(i));
+      picked = weightedSample(pool, weights, 10);
+    } else {
+      picked = shuffle(pool).slice(0, 10);
+    }
     sessionQueue = picked.map(({ q, i }) => ({ ...q, _idx: i }));
   } else {
     sessionQueue = shuffle(pool.map(({ q }) => q));
   }
 
   initSession();
+}
+
+// Drill mode — skip picker, use all questions
+function startDrill() {
+  mode = 'drill';
+  selectedSections = new Set(SECTIONS);
+  startSession();
 }
 
 // Test mode — 25 questions proportionally sampled across ALL sections
