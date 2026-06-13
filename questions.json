@@ -2242,5 +2242,757 @@
     "correct": "B",
     "explanation": "This Law reminds leaders that someone once had reasons to write the policy or build the process now under review. Taking time to understand the history behind what you are changing before trying to change it directly reflects this principle.",
     "section": "6.4 Group Dynamics and Effective Teams"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Johari Window, a senior enlisted leader consistently interrupts others during briefings but is completely unaware of this habit. In which pane of the Johari Window does this behavior reside?",
+    "options": [
+      "A. Open Area",
+      "B. Hidden Area",
+      "C. Blind Spot",
+      "D. Unknown"
+    ],
+    "correct": "C",
+    "explanation": "The Blind Spot contains information known to others but not to oneself. Because peers and subordinates are aware of the behavior but the leader is not, it falls squarely in the Blind Spot pane.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Johari Window, a Chief deliberately withholds personal struggles with work-life balance from her team to appear strong. Which pane holds this information, and what action would shrink it?",
+    "options": [
+      "A. Blind Spot; receiving feedback",
+      "B. Hidden Area; self-disclosure",
+      "C. Unknown; self-reflection",
+      "D. Open Area; active listening"
+    ],
+    "correct": "B",
+    "explanation": "Information the individual knows but intentionally hides from others resides in the Hidden Area (Facade). Self-disclosure moves that information into the Open Area, shrinking the Hidden Area.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Johari Window, the ultimate leadership goal is to maximize which pane, because it represents the information known to both the leader and those around them?",
+    "options": [
+      "A. Unknown",
+      "B. Hidden Area",
+      "C. Blind Spot",
+      "D. Open Area"
+    ],
+    "correct": "D",
+    "explanation": "The Open Area (Public Arena) is known to both self and others, fostering trust and effective communication. The model's goal is to continuously grow this pane through feedback and disclosure.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Johari Window, a Sergeant Major receives candid 360-degree feedback revealing that her tone is often perceived as dismissive. As a direct result, what change occurs within the model?",
+    "options": [
+      "A. The Unknown pane expands",
+      "B. The Hidden Area grows larger",
+      "C. The Blind Spot shrinks and the Open Area grows",
+      "D. The Open Area shrinks and the Blind Spot grows"
+    ],
+    "correct": "C",
+    "explanation": "Receiving feedback is the mechanism that shrinks the Blind Spot by making the leader aware of what others already knew. This simultaneously expands the Open Area.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Johari Window, which two individuals are credited with developing this model, and from whose names is the title derived?",
+    "options": [
+      "A. John Kotter and William Ingham",
+      "B. Joseph Luft and Harry Ingham",
+      "C. James MacGregor Burns and Harry Johari",
+      "D. Joseph Luft and Daniel Goleman"
+    ],
+    "correct": "B",
+    "explanation": "The Johari Window was created by psychologists Joseph Luft and Harry Ingham. The name 'Johari' is a portmanteau of their first names, Joe and Harry.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Johari Window, the Unknown pane contains information that is hidden from both the individual and others, such as subconscious behaviors or untapped potential, and it cannot be reduced through feedback or disclosure alone.",
+    "correct": "False",
+    "explanation": "While the Unknown pane does contain information hidden from both self and others, it can be reduced over time through deep self-reflection, therapy, or new experiences that bring subconscious material to awareness, which may then move information into other panes.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Johari Window, a leader who actively seeks feedback from subordinates and openly shares their own values and challenges will simultaneously shrink both the Blind Spot and the Hidden Area, resulting in a larger Open Area.",
+    "correct": "True",
+    "explanation": "Seeking feedback shrinks the Blind Spot while self-disclosure shrinks the Hidden Area. Both actions transfer information into the Open Area, which is the goal of the model for building trust and effective leadership.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Johari Window, information located in the Open Area is known to the leader but intentionally kept secret from others in order to maintain authority and positional power.",
+    "correct": "False",
+    "explanation": "The Open Area contains information known to BOTH the leader and others \u2014 it is not secret. Information the leader knows but keeps hidden from others belongs in the Hidden Area (Facade), not the Open Area.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Radical Candor model, a senior enlisted leader who consistently praises subordinates to avoid uncomfortable conversations \u2014 even when performance is suffering \u2014 is operating in which quadrant?",
+    "options": [
+      "A. Radical Candor",
+      "B. Obnoxious Aggression",
+      "C. Ruinous Empathy",
+      "D. Manipulative Insincerity"
+    ],
+    "correct": "C",
+    "explanation": "Ruinous Empathy occurs when a leader cares personally but fails to challenge directly. Avoiding hard truths to spare feelings may feel kind, but it ultimately holds people back from growth.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Radical Candor chart, a Chief who tears down a Sailor's work in front of the crew without any regard for the individual's dignity or development is demonstrating which leadership behavior?",
+    "options": [
+      "A. Radical Candor",
+      "B. Ruinous Empathy",
+      "C. Manipulative Insincerity",
+      "D. Obnoxious Aggression"
+    ],
+    "correct": "D",
+    "explanation": "Obnoxious Aggression sits in the high-challenge, low-care quadrant. The feedback may be direct, but the absence of genuine care causes it to land as disrespect rather than constructive criticism.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Radical Candor model, which quadrant represents the ideal leadership behavior because it balances honest, direct feedback with genuine respect and concern for the individual?",
+    "options": [
+      "A. Manipulative Insincerity",
+      "B. Ruinous Empathy",
+      "C. Obnoxious Aggression",
+      "D. Radical Candor"
+    ],
+    "correct": "D",
+    "explanation": "Radical Candor occupies the top-right quadrant, combining high Care Personally with high Challenge Directly. It allows leaders to say what they think from a foundation of trust and respect.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "A Senior Chief privately agrees a new policy is flawed but tells leadership it is great while complaining to peers behind closed doors. Looking at the Radical Candor chart, this behavior falls in which quadrant?",
+    "options": [
+      "A. Radical Candor",
+      "B. Obnoxious Aggression",
+      "C. Ruinous Empathy",
+      "D. Manipulative Insincerity"
+    ],
+    "correct": "D",
+    "explanation": "Manipulative Insincerity is the worst quadrant \u2014 low care combined with low challenge. It reflects political, backstabbing behavior where the leader neither genuinely cares nor honestly engages.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Radical Candor model, what is the key distinction that separates Radical Candor from Obnoxious Aggression when delivering difficult feedback?",
+    "options": [
+      "A. The rank of the person delivering the feedback",
+      "B. Whether the feedback is delivered in writing or verbally",
+      "C. The presence of genuine personal care for the individual receiving the feedback",
+      "D. Whether the feedback focuses on behavior or performance metrics"
+    ],
+    "correct": "C",
+    "explanation": "Both quadrants involve high challenge, but Radical Candor is distinguished by high Care Personally. Without genuine care, direct challenge becomes Obnoxious Aggression that damages relationships and trust.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Radical Candor chart, a leader who avoids giving critical feedback because they do not want to hurt a subordinate's feelings is demonstrating high Care Personally and is therefore operating in the ideal quadrant.",
+    "correct": "False",
+    "explanation": "Avoiding hard truths \u2014 even out of genuine care \u2014 places a leader in the Ruinous Empathy quadrant, not Radical Candor. The ideal quadrant requires both high care AND high challenge.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Radical Candor model, Manipulative Insincerity is considered the most damaging quadrant because it combines a lack of genuine care with a failure to provide honest, direct feedback.",
+    "correct": "True",
+    "explanation": "Manipulative Insincerity sits in the bottom-left quadrant with both low Care Personally and low Challenge Directly. It fosters political behavior and backstabbing, making it the most corrosive quadrant to unit trust and culture.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Radical Candor chart, a leader can achieve the Radical Candor ideal simply by being blunt and direct with subordinates, regardless of whether a personal relationship or sense of care has been established.",
+    "correct": "False",
+    "explanation": "Bluntness without care places a leader in the Obnoxious Aggression quadrant. Radical Candor requires that direct challenge be built on a foundation of genuine personal care and respect for the individual.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Situational Leadership model, a follower is able but insecure about taking on a new responsibility. Which readiness level and leadership style best apply?",
+    "options": [
+      "A. R2 / S2 Selling",
+      "B. R3 / S3 Participating",
+      "C. R1 / S1 Telling",
+      "D. R4 / S4 Delegating"
+    ],
+    "correct": "B",
+    "explanation": "R3 describes a follower who is able but insecure or unwilling. The matching style is S3 Participating, which is low task and high relationship, allowing the leader to support confidence while the follower applies existing skills.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Situational Leadership model, a new Sailor has no prior experience with the task and appears anxious about getting it wrong. Which leadership style should the leader use?",
+    "options": [
+      "A. S4 Delegating",
+      "B. S3 Participating",
+      "C. S2 Selling",
+      "D. S1 Telling"
+    ],
+    "correct": "D",
+    "explanation": "This Sailor matches R1 \u2014 unable and insecure. The appropriate response is S1 Telling, which provides high task direction and low relationship behavior. The leader gives specific instructions and closely supervises performance.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Referencing the Situational Leadership chart, which two styles are identified as the 'risky styles' and why?",
+    "options": [
+      "A. S2 and S3, because they combine high task and high relationship behaviors",
+      "B. S1 and S4, because one is always the lowest-probability choice in most situations",
+      "C. S1 and S3, because they both rely on leader-directed approaches",
+      "D. S2 and S4, because they are the hardest to execute under stress"
+    ],
+    "correct": "B",
+    "explanation": "The Situational Leadership model identifies S1 and S4 as the risky styles because one will always be the lowest-probability choice for any given situation. Using the wrong extreme \u2014 too much or too little direction \u2014 significantly reduces leadership effectiveness.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Situational Leadership model, a follower lacks the skill for a task but is highly motivated and eager to learn. Which readiness level and leadership style apply?",
+    "options": [
+      "A. R1 / S1 Telling",
+      "B. R4 / S4 Delegating",
+      "C. R2 / S2 Selling",
+      "D. R3 / S3 Participating"
+    ],
+    "correct": "C",
+    "explanation": "R2 describes a follower who is unable but confident or willing. The matching style is S2 Selling, which combines high task direction with high relationship support. The leader explains decisions and encourages dialogue while still providing structure.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Situational Leadership model, a senior petty officer who is fully capable, self-motivated, and confident in completing an assignment independently should receive which leadership style?",
+    "options": [
+      "A. S1 Telling",
+      "B. S2 Selling",
+      "C. S3 Participating",
+      "D. S4 Delegating"
+    ],
+    "correct": "D",
+    "explanation": "This individual matches R4 \u2014 able, confident, and willing. The appropriate style is S4 Delegating, which is low task and low relationship. The leader turns over responsibility and decision-making to the follower with minimal oversight.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Situational Leadership model, if a previously high-performing follower begins to regress in performance or motivation, the leader should move toward less direction and reduce task behavior.",
+    "correct": "False",
+    "explanation": "The model specifies that if a follower is regressing, the leader should apply a regressive intervention \u2014 moving back toward more direction, not less. Reducing structure during regression would fail to address the root performance issue.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Situational Leadership model, both S1 Telling and S2 Selling are considered leader-directed styles, meaning the leader retains primary responsibility for decision-making and guidance.",
+    "correct": "True",
+    "explanation": "The chart designates S1 and S2 as leader-directed styles. In both cases, the leader drives decisions and provides significant task guidance, which is appropriate when the follower lacks the ability to self-direct effectively.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Situational Leadership model, a follower's readiness level is fixed and does not change based on the specific task or situation they are facing.",
+    "correct": "False",
+    "explanation": "Readiness is task-specific, not a permanent trait. A follower may be at R4 for one responsibility and R1 for another depending on their ability, knowledge, experience, and willingness in that particular context. Leaders must assess readiness for each task.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Power Bases at Readiness Levels chart, which power base is most appropriate when working with a follower at the R1 readiness level?",
+    "options": [
+      "A. Reward power",
+      "B. Referent power",
+      "C. Coercive power",
+      "D. Expert power"
+    ],
+    "correct": "C",
+    "explanation": "The chart identifies coercive power as the appropriate base for R1 followers because they are low in readiness and need to understand there are consequences for their actions or inactions.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Power Bases chart, a follower is able but insecure \u2014 they have the skills to perform but lack confidence. Which power base should the leader rely on?",
+    "options": [
+      "A. Legitimate power",
+      "B. Coercive power",
+      "C. Information power",
+      "D. Referent power"
+    ],
+    "correct": "D",
+    "explanation": "An able but insecure follower falls at the R3 readiness level. The chart indicates referent power is most effective here because R3 followers respond to a leader they like and trust, which helps build their confidence.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Power Bases at Readiness Levels chart, a highly confident and competent follower at the R4 level is best influenced by which power base?",
+    "options": [
+      "A. Connection power",
+      "B. Legitimate power",
+      "C. Expert power",
+      "D. Reward power"
+    ],
+    "correct": "C",
+    "explanation": "The chart specifies expert power for R4 followers. Because these followers are already confident and highly competent, they respect and respond to a leader's demonstrated knowledge and skill rather than authority or incentives.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Referencing the Power Bases chart, a follower in the moderate readiness range responds best to formal authority and position. Which readiness level and power base does this describe?",
+    "options": [
+      "A. R1 \u2014 Coercive power",
+      "B. R2-R3 \u2014 Legitimate power",
+      "C. R3 \u2014 Referent power",
+      "D. R4 \u2014 Expert power"
+    ],
+    "correct": "B",
+    "explanation": "The chart maps legitimate power to the R2-R3 transition range. Followers in this moderate readiness zone recognize and respond to the leader's formal authority and organizational position.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Power Bases at Readiness Levels chart, which power base is most effective with a follower who is motivated to try new behaviors because they believe improvement will be recognized?",
+    "options": [
+      "A. Expert power",
+      "B. Connection power",
+      "C. Reward power",
+      "D. Coercive power"
+    ],
+    "correct": "C",
+    "explanation": "Reward power aligns with the R2 readiness level on the chart. R2 followers are beginning to develop but need the incentive of knowing that their efforts and improvement will be acknowledged and rewarded.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Power Bases at Readiness Levels chart, a leader should identify one preferred power base and apply it consistently across all followers regardless of their readiness level.",
+    "correct": "False",
+    "explanation": "The chart explicitly states that a leader matches the power base to the follower's readiness level rather than relying on one base for everyone. Effective leadership requires flexibility in applying the appropriate power base.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Power Bases chart, connection power is identified as appropriate for the R1-R2 range because followers at this level are motivated by wanting to avoid sanctions or gain favor with the leader.",
+    "correct": "True",
+    "explanation": "The chart confirms that connection power is matched to the R1-R2 range. Followers at this transitional level are influenced by the leader's network and relationships, responding to the potential for gaining favor or avoiding negative consequences.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Power Bases at Readiness Levels chart, information power is most effective with above-average followers in the R3-R4 range who look to their leader as a source of knowledge and guidance.",
+    "correct": "True",
+    "explanation": "The chart maps information power to the R3-R4 transition range. These above-average followers have moved beyond needing incentives or authority and are primarily influenced by the leader's ability to provide relevant information and insights.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Johari Window, a senior enlisted leader consistently interrupts others during briefings but is completely unaware of this behavior. Which pane of the Johari Window does this behavior occupy?",
+    "options": [
+      "A. Open Area (Public Arena)",
+      "B. Hidden Area (Facade)",
+      "C. Blind Spot",
+      "D. Unknown"
+    ],
+    "correct": "C",
+    "explanation": "The Blind Spot contains information known to others but not to the individual themselves. Because the leader is unaware of the interrupting behavior, yet others can clearly observe it, it falls squarely in the Blind Spot pane.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Johari Window, a staff NCO voluntarily shares with her team that she struggles with public speaking so they can adjust expectations and offer support. Which mechanism is she using, and what is the direct result?",
+    "options": [
+      "A. Feedback, which shrinks the Blind Spot",
+      "B. Disclosure, which grows the Open Area",
+      "C. Feedback, which grows the Unknown area",
+      "D. Disclosure, which shrinks the Blind Spot"
+    ],
+    "correct": "B",
+    "explanation": "When an individual voluntarily shares information about themselves that was previously hidden, this is called disclosure. Disclosure shrinks the Hidden Area (Facade) and simultaneously grows the Open Area, making more information mutually known.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Johari Window, the overall goal for effective leaders is to maximize which pane of the model?",
+    "options": [
+      "A. Unknown",
+      "B. Blind Spot",
+      "C. Hidden Area (Facade)",
+      "D. Open Area (Public Arena)"
+    ],
+    "correct": "D",
+    "explanation": "The Open Area, also called the Public Arena, represents information known to both the individual and others. Growing this pane enhances trust, communication, and collaboration, making it the primary goal within the Johari Window framework.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Johari Window, a command master chief receives candid 360-degree feedback revealing that subordinates perceive him as unapproachable \u2014 a trait he never recognized in himself. According to the model, what has this feedback accomplished?",
+    "options": [
+      "A. It expanded the Unknown pane by uncovering subconscious behavior",
+      "B. It shrank the Blind Spot and grew the Open Area",
+      "C. It shrank the Hidden Area and grew the Open Area",
+      "D. It moved information from the Open Area into the Hidden Area"
+    ],
+    "correct": "B",
+    "explanation": "Receiving feedback moves information from the Blind Spot \u2014 known to others but not to self \u2014 into the Open Area. This shrinks the Blind Spot and expands the Open Area, giving the leader greater self-awareness.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "The Johari Window was developed by two psychologists whose first names inspired the model's title. According to the chart, who are they?",
+    "options": [
+      "A. James Johari and Harold Window",
+      "B. Jonathan Luft and Henry Ingham",
+      "C. Joseph Luft and Harry Ingham",
+      "D. John Luft and Harold Ingram"
+    ],
+    "correct": "C",
+    "explanation": "The Johari Window is named after its creators, Joseph Luft and Harry Ingham, who developed the model as a tool for understanding self-awareness and interpersonal relationships. The name 'Johari' is a combination of their first names.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Johari Window, a leader who actively seeks feedback from peers and subordinates will shrink their Hidden Area (Facade) and grow their Open Area.",
+    "correct": "False",
+    "explanation": "Seeking and receiving feedback shrinks the Blind Spot, not the Hidden Area. It is disclosure \u2014 voluntarily sharing information about oneself \u2014 that shrinks the Hidden Area (Facade) and grows the Open Area.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Johari Window, the Unknown pane represents information that is hidden from both the individual and others, and may include subconscious behaviors or untapped potential.",
+    "correct": "True",
+    "explanation": "The Unknown pane contains information that neither the individual nor others are aware of, such as deeply subconscious motivations or undiscovered talents. It is the most hidden quadrant in the model.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Johari Window, both feedback and disclosure serve the same function \u2014 they both shrink the Blind Spot to grow the Open Area.",
+    "correct": "False",
+    "explanation": "Feedback and disclosure serve distinct functions in the model. Feedback shrinks the Blind Spot by informing the individual of what others already know. Disclosure shrinks the Hidden Area by revealing what the individual knows but has kept from others. Both grow the Open Area, but through different mechanisms.",
+    "section": "5.1 Leading with Feedback",
+    "image": "johari.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Radical Candor model, a senior enlisted leader consistently avoids giving critical feedback to a struggling sailor because she doesn't want to hurt their feelings \u2014 even though she genuinely cares about their success. Which quadrant best describes her behavior?",
+    "options": [
+      "A. Radical Candor",
+      "B. Ruinous Empathy",
+      "C. Obnoxious Aggression",
+      "D. Manipulative Insincerity"
+    ],
+    "correct": "B",
+    "explanation": "Ruinous Empathy occurs when a leader has high personal care but fails to challenge directly. Withholding hard truths to protect feelings ultimately holds the subordinate back rather than helping them grow.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Radical Candor chart, which quadrant represents the ideal leadership feedback style, and what combination of dimensions defines it?",
+    "options": [
+      "A. Manipulative Insincerity \u2014 low care, low challenge",
+      "B. Obnoxious Aggression \u2014 low care, high challenge",
+      "C. Radical Candor \u2014 high care, high challenge",
+      "D. Ruinous Empathy \u2014 high care, low challenge"
+    ],
+    "correct": "C",
+    "explanation": "Radical Candor sits in the top-right quadrant where a leader both cares personally and challenges directly. This combination creates an environment of honest, respectful feedback that drives genuine development.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Using the Radical Candor model, a Chief publicly tears down a junior sailor's performance in front of the division \u2014 delivering blunt, harsh criticism with no regard for the sailor's dignity or growth. Which quadrant does this behavior fall into?",
+    "options": [
+      "A. Radical Candor",
+      "B. Ruinous Empathy",
+      "C. Manipulative Insincerity",
+      "D. Obnoxious Aggression"
+    ],
+    "correct": "D",
+    "explanation": "Obnoxious Aggression reflects high challenge with low personal care. The feedback may be direct, but when it lacks respect and genuine concern for the individual, it registers as disrespect rather than development.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Referencing the Radical Candor framework, a senior NCO neither confronts a subordinate about repeated policy violations nor shows genuine concern for that subordinate's career. Behind the scenes, the NCO complains about the subordinate to peers. Which quadrant captures this behavior?",
+    "options": [
+      "A. Ruinous Empathy",
+      "B. Obnoxious Aggression",
+      "C. Manipulative Insincerity",
+      "D. Radical Candor"
+    ],
+    "correct": "C",
+    "explanation": "Manipulative Insincerity \u2014 the bottom-left quadrant \u2014 is characterized by low care and low challenge, often manifesting as political backstabbing or passive-aggressive behavior rather than honest, direct engagement.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Radical Candor model, what is the primary risk of operating in the Ruinous Empathy quadrant over time?",
+    "options": [
+      "A. Subordinates perceive the leader as overly aggressive and disrespectful",
+      "B. The leader builds a reputation for political manipulation",
+      "C. Subordinates are held back from growth because hard truths are never delivered",
+      "D. The leader challenges too directly without establishing personal rapport"
+    ],
+    "correct": "C",
+    "explanation": "Ruinous Empathy feels kind in the moment but causes long-term harm. By avoiding difficult conversations, the leader denies subordinates the honest feedback they need to improve, ultimately hindering their professional development.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Radical Candor model, a leader can achieve Radical Candor by challenging subordinates directly \u2014 even if they have not established a foundation of genuine personal care for those individuals.",
+    "correct": "False",
+    "explanation": "The model explicitly requires both dimensions \u2014 Care Personally and Challenge Directly. Without personal care, high challenge moves the leader into Obnoxious Aggression, not Radical Candor.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Radical Candor chart, Manipulative Insincerity is considered the most damaging quadrant because it combines a complete absence of honest challenge with a lack of genuine care for the subordinate.",
+    "correct": "True",
+    "explanation": "The bottom-left quadrant \u2014 Manipulative Insincerity \u2014 is identified as the worst because neither dimension is present. This environment breeds distrust, backstabbing, and political behavior that is corrosive to unit cohesion.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Radical Candor framework, delivering feedback that is both honest and kind \u2014 even when the message is difficult \u2014 is a hallmark of the Radical Candor quadrant and reflects a leader who has mastered the balance between the model's two core dimensions.",
+    "correct": "True",
+    "explanation": "Radical Candor is defined as saying what you think from a foundation of genuine respect and care. Leaders in this quadrant do not soften feedback to avoid discomfort, nor do they deliver it without regard for the person \u2014 they do both simultaneously.",
+    "section": "5.1 Leading with Feedback",
+    "image": "radical_candor.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Situational Leadership model, a follower is enthusiastic and eager to learn but lacks the knowledge and skill to complete the task independently. Which readiness level and leadership style best describes this situation?",
+    "options": [
+      "A. R1 \u2014 S1 Telling",
+      "B. R2 \u2014 S2 Selling",
+      "C. R3 \u2014 S3 Participating",
+      "D. R4 \u2014 S4 Delegating"
+    ],
+    "correct": "B",
+    "explanation": "R2 describes a follower who is unable but willing or confident. The matching style is S2 Selling, which is leader-directed with high task and high relationship behavior to build both skill and motivation simultaneously.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Situational Leadership model, a senior Sailor is fully capable of completing the mission and is both confident and motivated. What is the most effective leadership style for this follower?",
+    "options": [
+      "A. S1 Telling \u2014 provide step-by-step guidance",
+      "B. S2 Selling \u2014 explain decisions and encourage questions",
+      "C. S3 Participating \u2014 share decision-making and provide support",
+      "D. S4 Delegating \u2014 turn over responsibility with low task and low relationship behavior"
+    ],
+    "correct": "D",
+    "explanation": "An able, confident, and willing follower is at R4, which matches S4 Delegating. This style uses low task and low relationship behavior because the follower is self-directed and requires minimal oversight.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Referencing the Situational Leadership chart, a follower who was recently delegated a project has begun missing deadlines and expressing self-doubt about their abilities. What is the leader's most appropriate response?",
+    "options": [
+      "A. Maintain S4 Delegating to preserve the follower's autonomy",
+      "B. Move to S1 Telling immediately to re-establish full control",
+      "C. Apply regressive intervention by moving back toward more direction",
+      "D. Remove the follower from the task to protect mission success"
+    ],
+    "correct": "C",
+    "explanation": "When a follower regresses in readiness, the Situational Leadership model calls for a regressive intervention \u2014 moving back toward higher direction and support to address the decline before it worsens.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Situational Leadership model, which two styles are identified as the 'risky styles' and why?",
+    "options": [
+      "A. S2 and S3, because they require the most time and energy from the leader",
+      "B. S1 and S4, because one is always the lowest-probability choice in any given situation",
+      "C. S1 and S2, because they are both leader-directed and easily over-applied",
+      "D. S3 and S4, because they reduce leader involvement and risk mission failure"
+    ],
+    "correct": "B",
+    "explanation": "S1 and S4 are the risky styles because one is always the lowest-probability correct choice. Leaders who default to either extreme \u2014 over-directing or over-delegating \u2014 risk mismatching their style to the follower's actual readiness level.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Situational Leadership model, a follower is technically skilled and experienced but has recently become resistant and unmotivated due to a disagreement with the team. Which readiness level and leadership style applies?",
+    "options": [
+      "A. R1 \u2014 S1 Telling",
+      "B. R2 \u2014 S2 Selling",
+      "C. R3 \u2014 S3 Participating",
+      "D. R4 \u2014 S4 Delegating"
+    ],
+    "correct": "C",
+    "explanation": "A follower who is able but insecure or unwilling is at R3, which matches S3 Participating. This style emphasizes low task and high relationship behavior, focusing on rebuilding motivation and confidence through shared decision-making.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Situational Leadership model, readiness is determined solely by a follower's technical ability \u2014 their knowledge, experience, and skill on a given task.",
+    "correct": "False",
+    "explanation": "Readiness is a combination of both Ability (knowledge, experience, skill) and Willingness (confidence, motivation). A follower who is technically capable but unwilling or insecure is not fully ready and requires a different leadership approach.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Situational Leadership model, when a follower demonstrates growth and improvement in their readiness level, the leader should progressively move from higher direction toward less direction \u2014 for example, shifting from S1 toward S4.",
+    "correct": "True",
+    "explanation": "The model explicitly supports moving toward less directive styles as a follower develops. When ability and willingness increase, the leader gradually reduces task and relationship behavior, empowering the follower toward self-direction.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Situational Leadership model, S1 Telling is always the best style to apply during a time-sensitive crisis, regardless of the follower's readiness level.",
+    "correct": "False",
+    "explanation": "Leadership style should always be matched to the follower's readiness level, not defaulted to S1 in every high-pressure situation. Applying S1 to a high-readiness follower (R4) would be a mismatch and is identified as one of the risky styles when misapplied.",
+    "section": "6.1 Good Order and Discipline",
+    "image": "situational_leadership.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Power Bases at Readiness Levels chart, which power base is most appropriate when working with an R1 follower who has low readiness?",
+    "options": [
+      "A. Referent power",
+      "B. Expert power",
+      "C. Coercive power",
+      "D. Reward power"
+    ],
+    "correct": "C",
+    "explanation": "The chart identifies coercive power as the match for R1 followers because they need to understand there are consequences for their actions. At this stage, the follower lacks both ability and motivation, making clear accountability essential.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Power Bases at Readiness Levels chart, a senior NCO is highly skilled and self-confident in their role. Which power base should the leader rely on to most effectively influence this R4 follower?",
+    "options": [
+      "A. Legitimate power",
+      "B. Connection power",
+      "C. Coercive power",
+      "D. Expert power"
+    ],
+    "correct": "D",
+    "explanation": "The chart indicates that expert power is the appropriate base for R4 followers. Confident, high-readiness followers are most influenced by a leader's demonstrated knowledge and skill rather than authority or rewards.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "According to the Power Bases chart, a follower is able but insecure \u2014 they have the skill but lack confidence or willingness. What readiness level and corresponding power base best fits this situation?",
+    "options": [
+      "A. R2 \u2014 Reward power",
+      "B. R4 \u2014 Expert power",
+      "C. R3 \u2014 Referent power",
+      "D. R1 \u2014 Coercive power"
+    ],
+    "correct": "C",
+    "explanation": "The chart places R3 followers as those who are able but insecure, and matches them with referent power. These followers respond best to a leader they like and trust, making relationship-based influence the key lever.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Referencing the Power Bases at Readiness Levels chart, which power base is aligned with followers in the moderate readiness range who respond primarily to formal authority and organizational rank?",
+    "options": [
+      "A. Information power",
+      "B. Referent power",
+      "C. Legitimate power",
+      "D. Connection power"
+    ],
+    "correct": "C",
+    "explanation": "The chart identifies legitimate power as the match for R2-R3 followers in the moderate readiness range. These followers recognize and respond to the leader's formal position and authority within the organization.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "Looking at the Power Bases chart, an above-average follower is transitioning toward full readiness and actively seeks guidance from the leader to make sound decisions. Which power base does the chart recommend for this R3-R4 follower?",
+    "options": [
+      "A. Coercive power",
+      "B. Reward power",
+      "C. Referent power",
+      "D. Information power"
+    ],
+    "correct": "D",
+    "explanation": "The chart assigns information power to the R3-R4 range, where above-average followers look to the leader as a source of knowledge and data. Sharing relevant information reinforces the follower's growing confidence and competence.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Power Bases at Readiness Levels chart, a leader should identify a single power base and apply it consistently across all followers regardless of their individual readiness levels.",
+    "correct": "False",
+    "explanation": "The chart explicitly states that a leader matches the power base to each follower's readiness level rather than relying on one base for everyone. Effective leadership requires flexing the power base just as it requires flexing leadership style.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "tf",
+    "question": "According to the Power Bases at Readiness Levels chart, reward power is the appropriate influence base for an R2 follower because they are motivated to try new behaviors when they believe improvement will be recognized.",
+    "correct": "True",
+    "explanation": "The chart directly links reward power to R2 followers. At this readiness level, the follower is developing motivation and responds positively to the belief that their growth and effort will be acknowledged and rewarded.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
+  },
+  {
+    "type": "tf",
+    "question": "Looking at the Power Bases at Readiness Levels chart, connection power is appropriate at the R1-R2 range because followers at this stage are influenced by the leader's relationships \u2014 either to avoid sanctions or to gain favor through association.",
+    "correct": "True",
+    "explanation": "The chart identifies connection power as the match for the R1-R2 transition range. Followers here are beginning to respond to the leader's network and standing, motivated by a desire to avoid negative consequences or benefit from the leader's connections.",
+    "section": "6.0 Power Summary",
+    "image": "power_bases.png"
   }
 ]

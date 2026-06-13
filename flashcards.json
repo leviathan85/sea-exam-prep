@@ -1,0 +1,265 @@
+[
+  {
+    "tier": 1,
+    "term": "Johari Window",
+    "definition": "A self-awareness model with four panes: Open Area (known to self and others), Blind Spot (known to others, not self), Hidden Area/Facade (known to self, hidden from others), and Unknown (hidden from both). Feedback shrinks the Blind Spot; Disclosure shrinks the Hidden Area.",
+    "image": "johari.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 1,
+    "term": "Open Area (Public Arena)",
+    "definition": "The Johari Window pane known to BOTH self and others. The goal of feedback and disclosure is to grow this area. The larger it is, the more effective your communication and leadership.",
+    "image": "johari.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 1,
+    "term": "Blind Spot",
+    "definition": "The Johari Window pane known to OTHERS but NOT to self. Shrunk by receiving feedback. A dangerous blind spot means followers see problems the leader cannot \u2014 one of the most common leadership failures.",
+    "image": "johari.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 1,
+    "term": "Performance Readiness (R1\u2013R4)",
+    "definition": "A follower's readiness = Ability (knowledge, experience, skill) + Willingness (confidence, motivation). R1: unable & unwilling. R2: unable but willing. R3: able but unwilling/insecure. R4: able & confident. The leader matches their style to the follower's readiness level.",
+    "image": "situational_leadership.png",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 1,
+    "term": "S1 \u2013 Telling",
+    "definition": "Situational Leadership style for R1 followers (unable and unwilling). High task behavior, low relationship behavior. The leader directs with specific instructions and close supervision. One of the two 'risky styles.'",
+    "image": "situational_leadership.png",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 1,
+    "term": "S2 \u2013 Selling",
+    "definition": "Situational Leadership style for R2 followers (unable but willing). High task AND high relationship behavior. The leader explains decisions, provides encouragement, and invites questions to build both skill and confidence.",
+    "image": "situational_leadership.png",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 1,
+    "term": "S3 \u2013 Participating",
+    "definition": "Situational Leadership style for R3 followers (able but insecure or unwilling). Low task, high relationship behavior. The leader shares decision-making and focuses on encouragement and confidence-building, not direction.",
+    "image": "situational_leadership.png",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 1,
+    "term": "S4 \u2013 Delegating",
+    "definition": "Situational Leadership style for R4 followers (able and confident). Low task AND low relationship behavior. The leader turns over responsibility. One of the two 'risky styles' \u2014 wrong for anyone below R4.",
+    "image": "situational_leadership.png",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 1,
+    "term": "Power",
+    "definition": "Influence potential \u2014 the resource that enables a leader to gain compliance or commitment from others. Power is not the same as leadership. It is a resource a leader may or may not use.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 1,
+    "term": "Leadership",
+    "definition": "Any attempt to influence another individual or group. Power is one of the means by which a leader influences followers, but the two are not synonymous.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 1,
+    "term": "The Eight Power Bases",
+    "definition": "Coercive, Connection, Reward, Legitimate, Referent, Information, Expert, and Empowerment. Each maps to a follower readiness level. A leader should match the power base to the follower's readiness rather than rely on one base for everyone.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 1,
+    "term": "Position Power vs. Personal Power",
+    "definition": "Position power flows from the organization \u2014 superiors delegate it and can take it back. Personal power flows from the followers \u2014 it is earned through respect, trust, and commitment. Leaders should have both; personal power alone is preferable to position power alone.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 1,
+    "term": "Radical Candor",
+    "definition": "The ideal feedback style: Care Personally + Challenge Directly. Saying what you think from a foundation of real respect and concern. Contrasted with Ruinous Empathy, Obnoxious Aggression, and Manipulative Insincerity.",
+    "image": "radical_candor.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 1,
+    "term": "Ruinous Empathy",
+    "definition": "High care, low challenge. Avoiding hard truths to spare feelings. Ultimately holds people back by denying them the feedback they need to grow. The most common leadership failure mode.",
+    "image": "radical_candor.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 1,
+    "term": "Good Order and Discipline",
+    "definition": "A command climate where standards are known, understood, and consistently enforced. It is not about punishment \u2014 it is about creating the conditions for mission accomplishment and Sailor welfare.",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 1,
+    "term": "Regressive Intervention",
+    "definition": "When a follower's performance slips, the leader moves BACK toward a more directive style (e.g., from S3 back to S2). The drop in willingness is usually the first sign \u2014 address it before ability degrades.",
+    "image": "situational_leadership.png",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 2,
+    "term": "Style Adaptability",
+    "definition": "The degree to which a leader varies their style appropriately for the situation. Matters far more than style range alone. A wide range used inappropriately produces poor results.",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 2,
+    "term": "Obnoxious Aggression",
+    "definition": "Low care, high challenge. Delivering blunt criticism without showing you care \u2014 lands as disrespect rather than honest feedback. Sometimes called 'brutal honesty.'",
+    "image": "radical_candor.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 2,
+    "term": "Manipulative Insincerity",
+    "definition": "Low care AND low challenge. The worst Radical Candor quadrant. Neither honest nor caring \u2014 leads to backstabbing and political behavior.",
+    "image": "radical_candor.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 2,
+    "term": "Expert Power",
+    "definition": "Power held because of actual and perceived knowledge and experience. Most effective at R4 (high readiness). A leader erodes it by letting skills fall out of date or being shown to lack claimed competence.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 2,
+    "term": "Referent Power",
+    "definition": "Personal traits that lead followers to want to follow \u2014 charisma, respect, likeability. Most effective at R3. A leader erodes it through inconsistency or behavior that followers see as hypocritical.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 2,
+    "term": "Coercive Power",
+    "definition": "Power based on fear of consequences. Used at R1 (unable and unwilling followers). Overuse erodes trust and damages morale \u2014 should be a last resort, not a default.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 2,
+    "term": "Empowerment",
+    "definition": "An extension of delegation toward a higher level of follower autonomy. The leader trusts members to own the task entirely. Appropriate for R4 followers who are able, confident, and willing.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 2,
+    "term": "Forming, Storming, Norming, Performing",
+    "definition": "Tuckman's four stages of team development. Forming: polite, uncertain. Storming: conflict, power struggles. Norming: cohesion builds, norms established. Performing: high-functioning, interdependent. Some models add Adjourning.",
+    "section": "6.4 Group Dynamics and Effective Teams"
+  },
+  {
+    "tier": 2,
+    "term": "Team vs. Group",
+    "definition": "A group is two or more interdependent individuals. A team is a tighter, more interdependent form \u2014 small number of people with complementary skills, equally committed to a common purpose and mutual accountability.",
+    "section": "6.4 Group Dynamics and Effective Teams"
+  },
+  {
+    "tier": 2,
+    "term": "Heuristics",
+    "definition": "Mental shortcuts or rules of thumb used in decision-making. Useful for speed but can introduce bias. Common heuristics include availability, representativeness, and anchoring. Good leaders recognize when heuristics are leading them astray.",
+    "section": "5.3 Heuristics"
+  },
+  {
+    "tier": 2,
+    "term": "Organizational Communication",
+    "definition": "The flow of information within an organization. Includes downward (orders, policy), upward (feedback, reports), horizontal (peer coordination), and diagonal (cross-functional) communication.",
+    "section": "6.3 Organizational Communications"
+  },
+  {
+    "tier": 2,
+    "term": "Informative vs. Persuasive Presentation",
+    "definition": "Informative: promotes understanding of an idea, concept, or procedure. Persuasive: convinces the audience that a view is most valid or moves them to action. Most Navy briefs blend both but have a primary purpose.",
+    "section": "5.0 Effective Presentations"
+  },
+  {
+    "tier": 2,
+    "term": "Trait Anxiety vs. Situational Anxiety",
+    "definition": "Trait anxiety is internal \u2014 feelings of inadequacy or fear of speaking. Managed through positive imagery. Situational anxiety is external \u2014 caused by specific situations. Managed through practice, breathing, and ice breakers.",
+    "section": "5.0 Effective Presentations"
+  },
+  {
+    "tier": 2,
+    "term": "Authoritative, Consultative, Facilitative, Delegative",
+    "definition": "The four decision-making styles tied to R1\u2013R4. R1\u2192Authoritative (leader owns decision). R2\u2192Consultative (leader consults but decides). R3\u2192Facilitative (shared decision). R4\u2192Delegative (follower owns decision).",
+    "section": "7.0 Organizational Decision Making"
+  },
+  {
+    "tier": 3,
+    "term": "Hidden Area (Facade) \u2014 Johari Window",
+    "definition": "Known to self but hidden from others. Shrunk through disclosure \u2014 the act of sharing relevant information about how you behave as a leader. Shrinking the facade grows the Open Area.",
+    "image": "johari.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 3,
+    "term": "Unknown \u2014 Johari Window",
+    "definition": "Hidden from BOTH self and others. Represents the subconscious. Freud likened personality to an iceberg \u2014 much is below the surface. Hardest pane to address; may surface through deep reflection or crisis.",
+    "image": "johari.png",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 3,
+    "term": "LEAD Instrument",
+    "definition": "Leader Effectiveness and Adaptability Description. A multi-rater tool from the Center for Leadership Studies. LEAD-Self captures how you see yourself; LEAD-Other captures how followers/peers/supervisors see you. Comparing the two reveals gaps.",
+    "section": "5.1 Leading with Feedback"
+  },
+  {
+    "tier": 3,
+    "term": "Legitimate Power",
+    "definition": "Power held because of position within the organization. Effective at R2\u2013R3. A leader erodes it by leaning on title where it carries no weight, or by acting outside their scope of authority.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 3,
+    "term": "Connection Power",
+    "definition": "Power derived from associations with influential people. Effective at R1\u2013R2. Followers want to avoid sanctions or gain favor associated with the leader's network.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 3,
+    "term": "Information Power",
+    "definition": "Power from access to information others need or want. Effective at R3\u2013R4. Above-average followers look to the leader for information not available elsewhere.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 3,
+    "term": "Reward Power",
+    "definition": "Power based on the ability to provide rewards. Most effective at R2 \u2014 followers who are unable but willing are most likely to try new behavior when they believe improvement will be rewarded.",
+    "image": "power_bases.png",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "tier": 3,
+    "term": "Five Delivery Methods",
+    "definition": "Extemporaneous (from outline/notes), Manuscript (read from document), Visual Aids (PowerPoint-assisted), Memory (word for word \u2014 risky), Impromptu (no preparation). Extemporaneous is most common at SEA.",
+    "section": "5.0 Effective Presentations"
+  },
+  {
+    "tier": 3,
+    "term": "Constructive Discipline",
+    "definition": "A problem-solving, learning-oriented response when a member's performance slips. Focused on correction and growth, not punishment. Uses the Situational Leadership model to determine the appropriate intervention.",
+    "section": "6.1 Good Order and Discipline"
+  },
+  {
+    "tier": 3,
+    "term": "Management vs. Leadership",
+    "definition": "Management focuses on systems, processes, and things \u2014 planning, organizing, controlling. Leadership focuses on people \u2014 influencing, motivating, inspiring. Effective senior enlisted leaders must do both, but lead first.",
+    "section": "6.2 Management and Leadership"
+  }
+]
