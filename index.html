@@ -78,12 +78,13 @@
     margin-bottom: 14px;
   }
   .stats-bar h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 12px; }
-  .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .section-stat { font-size: 0.78rem; }
-  .section-stat .name { color: var(--text); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .section-stat .bar-wrap { height: 6px; background: var(--border); border-radius: 3px; margin-top: 3px; }
-  .section-stat .bar-fill { height: 6px; border-radius: 3px; background: var(--green); transition: width 0.4s; }
-  .section-stat .pct { color: var(--muted); font-size: 0.7rem; margin-top: 2px; }
+  .section-grid { display: flex; flex-direction: column; gap: 10px; }
+  .section-stat { font-size: 0.85rem; }
+  .section-stat .name { color: var(--text); font-weight: 600; margin-bottom: 4px; }
+  .section-stat .bar-row { display: flex; align-items: center; gap: 10px; }
+  .section-stat .bar-wrap { flex: 1; height: 7px; background: var(--border); border-radius: 4px; }
+  .section-stat .bar-fill { height: 7px; border-radius: 4px; background: var(--green); transition: width 0.4s; }
+  .section-stat .pct { color: var(--muted); font-size: 0.78rem; min-width: 68px; text-align: right; }
 
   /* ── Section picker ── */
   #section-picker { padding: 20px; }
@@ -416,11 +417,12 @@ function renderHomeStats() {
   el.innerHTML = SECTIONS.map(s => {
     const d = h[s] || { correct: 0, total: 0 };
     const pct = d.total ? Math.round((d.correct / d.total) * 100) : 0;
-    const shortName = s.replace(/\s*\(.*\)/, '').substring(0, 28);
     return `<div class="section-stat">
-      <div class="name" title="${s}">${shortName}</div>
-      <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
-      <div class="pct">${d.total ? pct + '%' : 'Not started'}</div>
+      <div class="name">${s}</div>
+      <div class="bar-row">
+        <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
+        <div class="pct">${d.total ? d.correct + '/' + d.total + ' · ' + pct + '%' : 'Not started'}</div>
+      </div>
     </div>`;
   }).join('');
 }
