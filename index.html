@@ -531,6 +531,7 @@ let flaggedIdxs = new Set();   // session question indices that are flagged
 let skippedIdxs = new Set();   // session question indices that were skipped
 let testAnswers = {};          // test mode: { sessionIdx: chosenValue } — not yet scored
 let answeredIdxs = new Set();  // study/drill: which session indices have been answered
+let studyAnswers = {};         // study mode: { sessionIdx: { chosen, wasCorrect } } for undo on back
 
 // ════════════════════════════════════════
 // LocalStorage helpers
@@ -782,6 +783,7 @@ function initSession() {
   skippedIdxs = new Set();
   testAnswers = {};
   answeredIdxs = new Set();
+  studyAnswers = {};
 
   selectedSections.forEach(s => sessionResults[s] = { correct: 0, total: 0 });
   sessionQueue.forEach(q => {
@@ -835,13 +837,23 @@ function renderQuestion() {
   if (q.image) { qImg.src = 'images/' + q.image; qImg.style.display = 'block'; }
   else { qImg.style.display = 'none'; }
 
-  // Action bar buttons
-  document.getElementById('back-btn').disabled = currentIdx === 0;
-  document.getElementById('flag-btn').className = 'qa-btn' + (isFlagged ? ' flagged' : '');
-  document.getElementById('flag-btn').textContent = isFlagged ? '🚩 Flagged' : '🚩 Flag';
+  // Action bar — show/hide per mode
+  const backBtn = document.getElementById('back-btn');
+  const flagBtn = document.getElementById('flag-btn');
   const skipBtn = document.getElementById('skip-btn');
-  skipBtn.style.display = mode === 'test' ? 'none' : '';
-  skipBtn.disabled = isAnswered;
+
+  // Back: Study + Test only
+  backBtn.style.display = mode === 'drill' ? 'none' : '';
+  backBtn.disabled = currentIdx === 0;
+
+  // Flag: Test only
+  flagBtn.style.display = mode === 'test' ? '' : 'none';
+  flagBtn.className = 'qa-btn' + (isFlagged ? ' flagged' : '');
+  flagBtn.textContent = isFlagged ? '🚩 Flagged' : '🚩 Flag';
+
+  // Skip: all modes, disabled once answered in study/drill
+  skipBtn.style.display = '';
+  skipBtn.disabled = (mode !== 'test') && isAnswered;
 
   // Reset feedback & next btn
   document.getElementById('feedback-box').className = 'feedback-box';
@@ -862,11 +874,7 @@ function renderQuestion() {
       const prior = testAnswers[currentIdx];
       if (prior === val) btn.classList.add('selected-test');
       btn.onclick = () => selectTestAnswer(val, q);
-    } else if (isAnswered) {
-      // Study/drill going back: show locked answer read-only
-      btn.disabled = true;
-      // We don't store exact prior answer for study, just show as locked
-    } else {
+      } else {
       btn.onclick = () => handleAnswer(val, q);
     }
     list.appendChild(btn);
@@ -879,12 +887,8 @@ function renderQuestion() {
     nextBtn.textContent = isLast ? 'Review & Submit →' : 'Next →';
   }
 
-  // Study/drill: if already answered this question going back, show next
-  if (mode !== 'test' && isAnswered) {
-    const nextBtn = document.getElementById('next-btn');
-    nextBtn.className = 'next-btn show';
-    nextBtn.textContent = isLast ? 'See Results' : 'Next →';
-  }
+  // Study/drill: already answered — next button visible but question is fresh for re-answer
+  // (isAnswered state is cleared when going back in study mode)
 }
 
 // Test mode: select (but don't lock) an answer
@@ -905,6 +909,7 @@ function selectTestAnswer(val, q) {
 function handleAnswer(chosen, q) {
   const isCorrect = chosen === q.correct;
   answeredIdxs.add(currentIdx);
+  studyAnswers[currentIdx] = { chosen, wasCorrect: isCorrect };
 
   correct += isCorrect ? 1 : 0;
   sessionResults[q.section].total++;
@@ -940,7 +945,24 @@ function skipQuestion() {
 }
 
 function prevQuestion() {
-  if (currentIdx > 0) { currentIdx--; renderQuestion(); }
+  if (currentIdx <= 0) return;
+  // In study mode: undo the previous answer so they can re-answer
+  if (mode === 'study') {
+    const prev = currentIdx - 1;
+    if (studyAnswers[prev] !== undefined) {
+      const { wasCorrect } = studyAnswers[prev];
+      // Undo score
+      if (wasCorrect) correct--;
+      const q = sessionQueue[prev];
+      sessionResults[q.section].total--;
+      if (wasCorrect) sessionResults[q.section].correct--;
+      // Clear answered state
+      answeredIdxs.delete(prev);
+      delete studyAnswers[prev];
+    }
+  }
+  currentIdx--;
+  renderQuestion();
 }
 
 function toggleFlag() {
