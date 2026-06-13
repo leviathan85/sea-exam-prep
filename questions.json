@@ -771,7 +771,7 @@
   },
   {
     "type": "mcq",
-    "question": "What is the purpose of critical thinking in the context of heuristics and decision making?",
+    "question": "What is the primary purpose of critical thinking when evaluating heuristics and decision-making biases?",
     "options": [
       "A. To replace intuitive decision making with a rigid, step-by-step analytical process",
       "B. To recognize heuristics at work, guard against the biases they introduce, and improve resulting decisions",
@@ -1600,7 +1600,7 @@
   },
   {
     "type": "tf",
-    "question": "Taking notes during a presentation improves memory retention even if the listener never reviews those notes afterward.",
+    "question": "Taking notes during a presentation improves memory retention even if the listener never reviews them.",
     "correct": "False",
     "explanation": "People who take notes but never review them retain no more than those who took no notes at all. Reviewing the notes afterward is the critical step that reinforces memory.",
     "section": "6.3 Organizational Communications"
@@ -1850,7 +1850,7 @@
   },
   {
     "type": "mcq",
-    "question": "How is power best defined in the context of leadership?",
+    "question": "How is power best defined in relation to leadership?",
     "options": [
       "A. The formal authority granted by a Chain of Command",
       "B. The ability to assign tasks and evaluate performance",
