@@ -301,6 +301,72 @@
     margin-bottom: 16px; display: block;
     border: 1px solid var(--border);
   }
+
+  /* ── Quiz action bar (back / flag / skip) ── */
+  .quiz-action-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 16px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+  }
+  .qa-btn {
+    background: none; border: none;
+    font-size: 0.8rem; font-weight: 700;
+    color: var(--muted); cursor: pointer;
+    padding: 6px 10px; border-radius: 8px;
+    -webkit-tap-highlight-color: transparent;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .qa-btn:active { background: var(--light); }
+  .qa-btn.flagged { color: #c8780a; }
+  .qa-btn:disabled { opacity: 0.3; cursor: default; }
+
+  /* selected option in test mode — not locked yet */
+  .option-btn.selected-test {
+    border-color: var(--navy);
+    background: #eef1f8;
+    font-weight: 700;
+  }
+
+  /* ── Test review screen ── */
+  #test-review { padding: 20px; }
+  .review-hero {
+    background: var(--navy); color: #fff;
+    border-radius: 16px; padding: 24px 20px;
+    text-align: center; margin-bottom: 20px;
+  }
+  .review-hero h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; }
+  .review-hero p  { font-size: 0.88rem; color: #a8b6d4; line-height: 1.5; }
+  .review-stat-row {
+    display: flex; gap: 10px; margin-top: 16px; justify-content: center;
+  }
+  .review-stat {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 10px 16px; text-align: center;
+  }
+  .review-stat .num { font-size: 1.6rem; font-weight: 800; color: var(--gold); }
+  .review-stat .lbl { font-size: 0.7rem; color: #a8b6d4; margin-top: 2px; }
+
+  .flagged-list { margin-bottom: 20px; }
+  .flagged-list h3 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 10px; }
+  .flagged-item {
+    background: #fff; border: 1px solid var(--border);
+    border-left: 4px solid #c8780a;
+    border-radius: 10px; padding: 12px 14px; margin-bottom: 8px;
+    font-size: 0.85rem; color: var(--text); line-height: 1.4;
+  }
+  .flagged-item .fi-section { font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
+
+  .submit-test-btn {
+    display: block; width: 100%;
+    background: var(--green); color: #fff;
+    border: none; border-radius: 14px;
+    padding: 18px; font-size: 1.1rem; font-weight: 800;
+    cursor: pointer; margin-bottom: 10px;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 4px 16px rgba(46,125,79,0.3);
+  }
+  .submit-test-btn:active { background: #235e38; }
 </style>
 </head>
 <body>
@@ -383,6 +449,13 @@
   <div class="quiz-progress"><div class="quiz-progress-fill" id="progress-fill"></div></div>
   <div class="drill-weight-bar" id="drill-weight-bar"></div>
 
+  <!-- Back / Flag / Skip bar -->
+  <div class="quiz-action-bar">
+    <button class="qa-btn" id="back-btn" onclick="prevQuestion()">‹ Back</button>
+    <button class="qa-btn" id="flag-btn" onclick="toggleFlag()">🚩 Flag</button>
+    <button class="qa-btn" id="skip-btn" onclick="skipQuestion()">Skip ›</button>
+  </div>
+
   <div class="question-area">
     <div class="q-type-label" id="q-type-label"></div>
     <div class="question-text" id="question-text"></div>
@@ -396,6 +469,33 @@
 
   <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next →</button>
   <div style="height:80px"></div>
+</div>
+
+<!-- ══════════ TEST REVIEW ══════════ -->
+<div id="test-review" class="screen">
+  <div class="review-hero">
+    <h2>Ready to Submit?</h2>
+    <p>Review your flagged questions below, then submit when you're done.</p>
+    <div class="review-stat-row">
+      <div class="review-stat">
+        <div class="num" id="rv-answered">0</div>
+        <div class="lbl">Answered</div>
+      </div>
+      <div class="review-stat">
+        <div class="num" id="rv-skipped">0</div>
+        <div class="lbl">Skipped</div>
+      </div>
+      <div class="review-stat">
+        <div class="num" id="rv-flagged">0</div>
+        <div class="lbl">Flagged</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flagged-list" id="flagged-list"></div>
+
+  <button class="submit-test-btn" onclick="submitTest()">✓ Submit Test</button>
+  <button class="btn-secondary" style="display:block;width:100%;padding:15px;border-radius:12px;font-size:0.95rem;font-weight:700;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--navy);" onclick="goBackToTest()">‹ Go Back to Test</button>
 </div>
 
 <!-- ══════════ RESULTS ══════════ -->
@@ -427,6 +527,10 @@ let startTime = null;
 let timerInterval = null;
 let selectedSections = new Set();
 let sessionResults = {};   // { section: { correct, total } }
+let flaggedIdxs = new Set();   // session question indices that are flagged
+let skippedIdxs = new Set();   // session question indices that were skipped
+let testAnswers = {};          // test mode: { sessionIdx: chosenValue } — not yet scored
+let answeredIdxs = new Set();  // study/drill: which session indices have been answered
 
 // ════════════════════════════════════════
 // LocalStorage helpers
@@ -674,8 +778,12 @@ function initSession() {
   currentIdx = 0;
   correct = 0;
   sessionResults = {};
+  flaggedIdxs = new Set();
+  skippedIdxs = new Set();
+  testAnswers = {};
+  answeredIdxs = new Set();
+
   selectedSections.forEach(s => sessionResults[s] = { correct: 0, total: 0 });
-  // Also init for test mode which doesn't use selectedSections
   sessionQueue.forEach(q => {
     if (!sessionResults[q.section]) sessionResults[q.section] = { correct: 0, total: 0 };
   });
@@ -707,6 +815,9 @@ function elapsedStr() {
 function renderQuestion() {
   const q = sessionQueue[currentIdx];
   const total = sessionQueue.length;
+  const isAnswered = answeredIdxs.has(currentIdx);
+  const isFlagged  = flaggedIdxs.has(currentIdx);
+  const isLast     = currentIdx === total - 1;
 
   document.getElementById('q-counter').textContent = `Question ${currentIdx+1} of ${total}`;
   document.getElementById('q-section').textContent = q.section;
@@ -714,7 +825,7 @@ function renderQuestion() {
   document.getElementById('question-text').textContent = q.question;
   document.getElementById('progress-fill').style.width = ((currentIdx/total)*100) + '%';
 
-  // Show chart image if question has one
+  // Chart image
   let qImg = document.getElementById('q-img');
   if (!qImg) {
     qImg = document.createElement('img');
@@ -724,7 +835,15 @@ function renderQuestion() {
   if (q.image) { qImg.src = 'images/' + q.image; qImg.style.display = 'block'; }
   else { qImg.style.display = 'none'; }
 
-  // Reset feedback
+  // Action bar buttons
+  document.getElementById('back-btn').disabled = currentIdx === 0;
+  document.getElementById('flag-btn').className = 'qa-btn' + (isFlagged ? ' flagged' : '');
+  document.getElementById('flag-btn').textContent = isFlagged ? '🚩 Flagged' : '🚩 Flag';
+  const skipBtn = document.getElementById('skip-btn');
+  skipBtn.style.display = mode === 'test' ? 'none' : '';
+  skipBtn.disabled = isAnswered;
+
+  // Reset feedback & next btn
   document.getElementById('feedback-box').className = 'feedback-box';
   document.getElementById('next-btn').className = 'next-btn';
 
@@ -736,50 +855,111 @@ function renderQuestion() {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
     btn.textContent = opt;
-    btn.onclick = () => handleAnswer(q.type === 'mcq' ? opt.charAt(0) : opt, q);
+    const val = q.type === 'mcq' ? opt.charAt(0) : opt;
+
+    if (mode === 'test') {
+      // Test mode: selectable but not locked — restore prior selection if going back
+      const prior = testAnswers[currentIdx];
+      if (prior === val) btn.classList.add('selected-test');
+      btn.onclick = () => selectTestAnswer(val, q);
+    } else if (isAnswered) {
+      // Study/drill going back: show locked answer read-only
+      btn.disabled = true;
+      // We don't store exact prior answer for study, just show as locked
+    } else {
+      btn.onclick = () => handleAnswer(val, q);
+    }
     list.appendChild(btn);
   });
+
+  // If test mode and already has a selection, show Next
+  if (mode === 'test' && testAnswers[currentIdx] !== undefined) {
+    const nextBtn = document.getElementById('next-btn');
+    nextBtn.className = 'next-btn show';
+    nextBtn.textContent = isLast ? 'Review & Submit →' : 'Next →';
+  }
+
+  // Study/drill: if already answered this question going back, show next
+  if (mode !== 'test' && isAnswered) {
+    const nextBtn = document.getElementById('next-btn');
+    nextBtn.className = 'next-btn show';
+    nextBtn.textContent = isLast ? 'See Results' : 'Next →';
+  }
 }
 
+// Test mode: select (but don't lock) an answer
+function selectTestAnswer(val, q) {
+  testAnswers[currentIdx] = val;
+  // Highlight selected, clear others
+  document.querySelectorAll('.option-btn').forEach(btn => {
+    const bval = q.type === 'mcq' ? btn.textContent.charAt(0) : btn.textContent;
+    btn.classList.toggle('selected-test', bval === val);
+  });
+  const isLast = currentIdx === sessionQueue.length - 1;
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.className = 'next-btn show';
+  nextBtn.textContent = isLast ? 'Review & Submit →' : 'Next →';
+}
+
+// Study/drill: lock in answer immediately
 function handleAnswer(chosen, q) {
   const isCorrect = chosen === q.correct;
-  const isLast = currentIdx === sessionQueue.length - 1;
+  answeredIdxs.add(currentIdx);
 
-  // Update counts
   correct += isCorrect ? 1 : 0;
   sessionResults[q.section].total++;
   if (isCorrect) sessionResults[q.section].correct++;
   recordHistory(q.section, isCorrect);
   if (mode === 'drill' && q._idx !== undefined) recordDrill(q._idx, isCorrect);
 
-  // Highlight buttons — in test mode just show selection, no green/red
   document.querySelectorAll('.option-btn').forEach(btn => {
     btn.disabled = true;
     const val = q.type === 'mcq' ? btn.textContent.charAt(0) : btn.textContent;
-    if (mode === 'test') {
-      if (val === chosen) btn.style.cssText = 'border-color:#1a2744;background:#eef1f8;font-weight:700;';
-    } else {
-      if (val === q.correct) btn.classList.add('correct');
-      else if (val === chosen && !isCorrect) btn.classList.add('wrong');
-    }
+    if (val === q.correct) btn.classList.add('correct');
+    else if (val === chosen && !isCorrect) btn.classList.add('wrong');
   });
 
-  // Show feedback in study/drill modes
-  if (mode !== 'test') {
-    const fb = document.getElementById('feedback-box');
-    fb.className = 'feedback-box show ' + (isCorrect ? 'correct' : 'wrong');
-    document.getElementById('feedback-verdict').textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
-    document.getElementById('feedback-text').textContent = q.explanation;
-  }
+  const fb = document.getElementById('feedback-box');
+  fb.className = 'feedback-box show ' + (isCorrect ? 'correct' : 'wrong');
+  document.getElementById('feedback-verdict').textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
+  document.getElementById('feedback-text').textContent = q.explanation;
 
+  const isLast = currentIdx === sessionQueue.length - 1;
   const nextBtn = document.getElementById('next-btn');
   nextBtn.className = 'next-btn show';
   nextBtn.textContent = isLast ? 'See Results' : 'Next →';
+  document.getElementById('skip-btn').disabled = true;
+}
+
+function skipQuestion() {
+  skippedIdxs.add(currentIdx);
+  if (currentIdx < sessionQueue.length - 1) {
+    currentIdx++;
+    renderQuestion();
+  }
+}
+
+function prevQuestion() {
+  if (currentIdx > 0) { currentIdx--; renderQuestion(); }
+}
+
+function toggleFlag() {
+  if (flaggedIdxs.has(currentIdx)) flaggedIdxs.delete(currentIdx);
+  else flaggedIdxs.add(currentIdx);
+  const btn = document.getElementById('flag-btn');
+  btn.className = 'qa-btn' + (flaggedIdxs.has(currentIdx) ? ' flagged' : '');
+  btn.textContent = flaggedIdxs.has(currentIdx) ? '🚩 Flagged' : '🚩 Flag';
 }
 
 function nextQuestion() {
-  if (currentIdx === sessionQueue.length - 1) showResults();
-  else { currentIdx++; renderQuestion(); }
+  if (mode === 'test' && currentIdx === sessionQueue.length - 1) {
+    showTestReview();
+  } else if (mode !== 'test' && currentIdx === sessionQueue.length - 1) {
+    showResults();
+  } else {
+    currentIdx++;
+    renderQuestion();
+  }
 }
 
 function confirmQuit() {
@@ -787,6 +967,57 @@ function confirmQuit() {
     clearInterval(timerInterval);
     showHome();
   }
+}
+
+// ════════════════════════════════════════
+// Test review + submit
+// ════════════════════════════════════════
+function showTestReview() {
+  const total = sessionQueue.length;
+  const answered = Object.keys(testAnswers).length;
+  const skipped = skippedIdxs.size + (total - answered - skippedIdxs.size > 0 ? total - answered - skippedIdxs.size : 0);
+  const unanswered = total - answered;
+
+  document.getElementById('rv-answered').textContent = answered;
+  document.getElementById('rv-skipped').textContent = unanswered;
+  document.getElementById('rv-flagged').textContent = flaggedIdxs.size;
+
+  const flaggedList = document.getElementById('flagged-list');
+  if (flaggedIdxs.size > 0) {
+    flaggedList.innerHTML = `<h3>🚩 Flagged Questions</h3>` +
+      [...flaggedIdxs].map(i => {
+        const q = sessionQueue[i];
+        const sel = testAnswers[i];
+        return `<div class="flagged-item">
+          <div>Q${i+1}: ${q.question}</div>
+          <div class="fi-section">${q.section}${sel ? ' · Your answer: ' + sel : ' · Not answered'}</div>
+        </div>`;
+      }).join('');
+  } else {
+    flaggedList.innerHTML = '';
+  }
+
+  showScreen('test-review');
+}
+
+function goBackToTest() {
+  showScreen('quiz');
+  renderQuestion();
+}
+
+function submitTest() {
+  // Score all test answers
+  correct = 0;
+  sessionQueue.forEach((q, i) => {
+    const chosen = testAnswers[i];
+    if (chosen === undefined) return; // unanswered — counts as wrong
+    const isCorrect = chosen === q.correct;
+    if (isCorrect) correct++;
+    sessionResults[q.section].total++;
+    if (isCorrect) sessionResults[q.section].correct++;
+    recordHistory(q.section, isCorrect);
+  });
+  showResults();
 }
 
 // ════════════════════════════════════════
