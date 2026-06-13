@@ -167,12 +167,23 @@
 
   .quiz-header {
     background: var(--navy); color: #fff;
-    padding: 12px 20px;
+    padding: 12px 16px;
     display: flex; align-items: center; justify-content: space-between;
+    gap: 8px;
   }
   .q-counter { font-size: 0.85rem; color: #a8b6d4; }
-  .q-section-label { font-size: 0.75rem; color: var(--gold); max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
-  .q-timer { font-size: 0.85rem; font-variant-numeric: tabular-nums; color: #a8b6d4; }
+  .q-section-label { font-size: 0.75rem; color: var(--gold); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+  .q-timer { font-size: 0.85rem; font-variant-numeric: tabular-nums; color: #a8b6d4; white-space: nowrap; }
+  .quiz-quit-btn {
+    background: rgba(255,255,255,0.1);
+    border: none; border-radius: 8px;
+    color: #a8b6d4; font-size: 0.78rem; font-weight: 700;
+    padding: 6px 10px; cursor: pointer;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
+  }
+  .quiz-quit-btn:active { background: rgba(255,255,255,0.2); }
 
   .quiz-progress { height: 4px; background: #2e3f6a; }
   .quiz-progress-fill { height: 4px; background: var(--gold); transition: width 0.3s; }
@@ -354,7 +365,8 @@
 <!-- ══════════ QUIZ ══════════ -->
 <div id="quiz" class="screen">
   <div class="quiz-header">
-    <div>
+    <button class="quiz-quit-btn" onclick="confirmQuit()">✕ Quit</button>
+    <div style="text-align:center">
       <div class="q-counter" id="q-counter">Question 1 of 10</div>
       <div class="q-section-label" id="q-section"></div>
     </div>
@@ -735,6 +747,13 @@ function nextQuestion() {
   else { currentIdx++; renderQuestion(); }
 }
 
+function confirmQuit() {
+  if (confirm('Quit this session? Your progress so far will still be saved.')) {
+    clearInterval(timerInterval);
+    showHome();
+  }
+}
+
 // ════════════════════════════════════════
 // Results
 // ════════════════════════════════════════
@@ -781,13 +800,14 @@ function showResults() {
     actions.appendChild(drillWeak);
   }
 
-  if (mode === 'drill') {
-    const again = document.createElement('button');
-    again.className = 'btn-primary';
-    again.textContent = 'Drill Again';
-    again.onclick = startSession;
-    actions.appendChild(again);
-  }
+  const restart = document.createElement('button');
+  restart.className = 'btn-primary';
+  restart.textContent = mode === 'drill' ? '🎯 Drill Again' : mode === 'test' ? '📋 Restart Test' : '📖 Study Again';
+  restart.onclick = () => {
+    if (mode === 'test') startTest();
+    else startSession();
+  };
+  actions.appendChild(restart);
 
   const home = document.createElement('button');
   home.className = 'btn-secondary';
