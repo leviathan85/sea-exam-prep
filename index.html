@@ -721,12 +721,16 @@ function handleAnswer(chosen, q) {
   recordHistory(q.section, isCorrect);
   if (mode === 'drill' && q._idx !== undefined) recordDrill(q._idx, isCorrect);
 
-  // Highlight buttons
+  // Highlight buttons — in test mode just show selection, no green/red
   document.querySelectorAll('.option-btn').forEach(btn => {
     btn.disabled = true;
     const val = q.type === 'mcq' ? btn.textContent.charAt(0) : btn.textContent;
-    if (val === q.correct) btn.classList.add('correct');
-    else if (val === chosen && !isCorrect) btn.classList.add('wrong');
+    if (mode === 'test') {
+      if (val === chosen) btn.style.cssText = 'border-color:#1a2744;background:#eef1f8;font-weight:700;';
+    } else {
+      if (val === q.correct) btn.classList.add('correct');
+      else if (val === chosen && !isCorrect) btn.classList.add('wrong');
+    }
   });
 
   // Show feedback in study/drill modes
