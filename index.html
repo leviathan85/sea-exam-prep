@@ -10,6 +10,7 @@
     --gold: #c8a951;
     --green: #2e7d4f;
     --red: #b53a2f;
+    --purple: #5b3fa0;
     --light: #f5f6f8;
     --border: #dde1e9;
     --text: #1c1c1e;
@@ -29,7 +30,7 @@
   header {
     background: var(--navy);
     color: #fff;
-    padding: 16px 20px;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -42,79 +43,112 @@
   .screen.active { display: block; }
 
   /* ── Home ── */
-  #home { padding: 24px 20px; }
-  .welcome { font-size: 1rem; color: var(--muted); margin-bottom: 24px; line-height: 1.5; }
+  #home { padding: 20px; }
+  .welcome { font-size: 0.9rem; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
 
   .mode-card {
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 20px;
-    margin-bottom: 14px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
     cursor: pointer;
     transition: box-shadow 0.15s, transform 0.1s;
     -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
   }
   .mode-card:active { transform: scale(0.98); }
-  .mode-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-  .mode-card h2 { font-size: 1.1rem; margin-bottom: 6px; color: var(--navy); }
-  .mode-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.5; }
-  .mode-card .badge {
+  .mode-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .mode-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .mode-card h2 { font-size: 1rem; margin-bottom: 4px; color: var(--navy); }
+  .mode-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.45; }
+  .badge {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     padding: 3px 10px;
     border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
   }
-  .badge-study { background: #e8f4ee; color: var(--green); }
-  .badge-test  { background: #fff3e0; color: #b36200; }
+  .badge-study  { background: #e8f4ee; color: var(--green); }
+  .badge-drill  { background: #ede8f8; color: var(--purple); }
+  .badge-test   { background: #fff3e0; color: #b36200; }
 
-  .stats-bar {
+  /* Progress card */
+  .progress-card {
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 16px 20px;
+    margin-top: 4px;
+  }
+  .progress-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 14px;
   }
-  .stats-bar h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 12px; }
-  .section-grid { display: flex; flex-direction: column; gap: 10px; }
-  .section-stat { font-size: 0.85rem; }
-  .section-stat .name { color: var(--text); font-weight: 600; margin-bottom: 4px; }
-  .section-stat .bar-row { display: flex; align-items: center; gap: 10px; }
-  .section-stat .bar-wrap { flex: 1; height: 7px; background: var(--border); border-radius: 4px; }
-  .section-stat .bar-fill { height: 7px; border-radius: 4px; background: var(--green); transition: width 0.4s; }
-  .section-stat .pct { color: var(--muted); font-size: 0.78rem; min-width: 68px; text-align: right; }
+  .progress-card h3 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+  .reset-all-btn {
+    background: none; border: none;
+    font-size: 0.75rem; color: var(--red);
+    font-weight: 600; cursor: pointer; padding: 0;
+  }
+  .section-stat { margin-bottom: 12px; }
+  .section-stat:last-child { margin-bottom: 0; }
+  .stat-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+  .stat-name { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+  .stat-meta { display: flex; align-items: center; gap: 10px; }
+  .stat-pct { font-size: 0.78rem; color: var(--muted); }
+  .stat-reset { background: none; border: none; font-size: 0.7rem; color: var(--muted); cursor: pointer; padding: 0; text-decoration: underline; }
+  .bar-wrap { height: 7px; background: var(--border); border-radius: 4px; }
+  .bar-fill { height: 7px; border-radius: 4px; transition: width 0.4s; }
 
-  /* ── Section picker ── */
+  /* ── Section Picker ── */
   #section-picker { padding: 20px; }
   .back-btn {
-    display: flex; align-items: center; gap: 6px;
+    display: flex; align-items: center; gap: 4px;
     background: none; border: none; color: var(--navy);
-    font-size: 0.95rem; font-weight: 600; cursor: pointer;
-    padding: 0; margin-bottom: 20px;
+    font-size: 0.95rem; font-weight: 700; cursor: pointer;
+    padding: 0; margin-bottom: 18px;
   }
-  .picker-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-  .picker-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 18px; }
+  .picker-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .picker-sub { font-size: 0.83rem; color: var(--muted); margin-bottom: 16px; line-height: 1.4; }
+  .select-all-row { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+  .select-all-btn { background: none; border: none; color: var(--navy); font-size: 0.83rem; font-weight: 700; cursor: pointer; }
 
   .section-option {
     background: #fff;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
     border-radius: 12px;
-    padding: 14px 16px;
-    margin-bottom: 10px;
+    padding: 13px 16px;
+    margin-bottom: 8px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: box-shadow 0.15s;
     -webkit-tap-highlight-color: transparent;
+    transition: border-color 0.15s, background 0.15s;
   }
   .section-option.selected { border-color: var(--navy); background: #eef1f8; }
   .section-option:active { transform: scale(0.98); }
-  .section-option .sec-name { font-size: 0.9rem; font-weight: 500; color: var(--navy); }
-  .section-option .sec-count { font-size: 0.78rem; color: var(--muted); }
-  .checkmark { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .sec-name { font-size: 0.88rem; font-weight: 600; color: var(--navy); }
+  .sec-count { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+  .checkmark {
+    width: 24px; height: 24px; border-radius: 50%;
+    border: 2px solid var(--border); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 700;
+    transition: all 0.15s;
+  }
   .section-option.selected .checkmark { background: var(--navy); border-color: var(--navy); color: #fff; }
 
   .start-btn {
@@ -122,205 +156,207 @@
     background: var(--navy); color: #fff;
     border: none; border-radius: 12px;
     padding: 16px; font-size: 1rem; font-weight: 700;
-    cursor: pointer; margin-top: 16px;
-    transition: background 0.15s;
+    cursor: pointer; margin-top: 14px;
     -webkit-tap-highlight-color: transparent;
   }
-  .start-btn:disabled { background: #aaa; cursor: not-allowed; }
+  .start-btn:disabled { background: #bbb; cursor: not-allowed; }
   .start-btn:not(:disabled):active { background: #0f1a33; }
-
-  .select-all-row {
-    display: flex; justify-content: flex-end;
-    margin-bottom: 10px;
-  }
-  .select-all-btn {
-    background: none; border: none; color: var(--navy);
-    font-size: 0.85rem; font-weight: 600; cursor: pointer;
-    padding: 4px 0;
-  }
 
   /* ── Quiz ── */
   #quiz { padding: 0; }
 
   .quiz-header {
-    background: var(--navy);
-    color: #fff;
+    background: var(--navy); color: #fff;
     padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
   }
-  .quiz-header .q-counter { font-size: 0.85rem; color: #a8b6d4; }
-  .quiz-header .section-label { font-size: 0.78rem; color: var(--gold); max-width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .quiz-header .timer { font-size: 0.85rem; font-variant-numeric: tabular-nums; color: #a8b6d4; }
+  .q-counter { font-size: 0.85rem; color: #a8b6d4; }
+  .q-section-label { font-size: 0.75rem; color: var(--gold); max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+  .q-timer { font-size: 0.85rem; font-variant-numeric: tabular-nums; color: #a8b6d4; }
 
-  .progress-bar { height: 4px; background: #2e3f6a; }
-  .progress-fill { height: 4px; background: var(--gold); transition: width 0.3s; }
+  .quiz-progress { height: 4px; background: #2e3f6a; }
+  .quiz-progress-fill { height: 4px; background: var(--gold); transition: width 0.3s; }
 
-  .question-area { padding: 24px 20px 16px; }
-  .q-type-badge {
-    display: inline-block;
-    font-size: 0.72rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.06em;
-    color: var(--muted); margin-bottom: 10px;
-  }
+  .question-area { padding: 22px 20px 14px; }
+  .q-type-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 10px; }
   .question-text { font-size: 1.05rem; font-weight: 600; line-height: 1.55; color: var(--text); margin-bottom: 20px; }
 
   .options-list { display: flex; flex-direction: column; gap: 10px; }
-
   .option-btn {
     width: 100%; text-align: left;
     background: #fff; border: 1.5px solid var(--border);
     border-radius: 12px; padding: 14px 16px;
     font-size: 0.95rem; color: var(--text);
-    cursor: pointer; transition: border-color 0.15s, background 0.15s;
+    cursor: pointer; line-height: 1.4;
     -webkit-tap-highlight-color: transparent;
-    line-height: 1.4;
+    transition: border-color 0.12s, background 0.12s;
   }
   .option-btn:not(:disabled):active { background: #eef1f8; }
-  .option-btn.correct  { border-color: var(--green); background: #e8f4ee; color: var(--green); font-weight: 600; }
-  .option-btn.wrong    { border-color: var(--red);   background: #fdecea; color: var(--red);   font-weight: 600; }
+  .option-btn.correct { border-color: var(--green); background: #e8f4ee; color: var(--green); font-weight: 700; }
+  .option-btn.wrong   { border-color: var(--red);   background: #fdecea; color: var(--red);   font-weight: 700; }
   .option-btn:disabled { cursor: default; }
 
   .feedback-box {
-    margin: 16px 20px;
+    margin: 14px 20px 0;
     padding: 14px 16px;
     border-radius: 12px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.55;
     display: none;
   }
   .feedback-box.show { display: block; }
   .feedback-box.correct { background: #e8f4ee; color: #1d5c36; border: 1px solid #b7dfc7; }
   .feedback-box.wrong   { background: #fdecea; color: #7a1f18; border: 1px solid #f5b8b4; }
-  .feedback-box strong  { display: block; margin-bottom: 4px; }
+  .feedback-box strong  { display: block; margin-bottom: 4px; font-size: 0.95rem; }
 
   .next-btn {
-    display: block; width: calc(100% - 40px);
-    margin: 0 20px 24px;
+    display: none;
+    width: calc(100% - 40px);
+    margin: 14px 20px 24px;
     background: var(--navy); color: #fff;
     border: none; border-radius: 12px;
     padding: 15px; font-size: 1rem; font-weight: 700;
-    cursor: pointer; display: none;
+    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
   .next-btn.show { display: block; }
   .next-btn:active { background: #0f1a33; }
 
+  /* Drill mode indicator */
+  .drill-weight-bar {
+    height: 3px;
+    background: linear-gradient(to right, var(--green), var(--gold), var(--red));
+    display: none;
+  }
+  .drill-weight-bar.show { display: block; }
+
   /* ── Results ── */
-  #results { padding: 24px 20px; }
+  #results { padding: 20px; }
+
   .result-hero {
     background: var(--navy);
     border-radius: 16px;
     padding: 28px 20px;
     text-align: center;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
-  .result-hero .score-num { font-size: 3.5rem; font-weight: 800; color: var(--gold); }
-  .result-hero .score-label { font-size: 0.9rem; color: #a8b6d4; margin-top: 4px; }
-  .result-hero .elapsed { font-size: 0.85rem; color: #a8b6d4; margin-top: 8px; }
+  .result-mode-label { font-size: 0.75rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .score-num { font-size: 3.8rem; font-weight: 800; color: var(--gold); line-height: 1; }
+  .score-label { font-size: 0.9rem; color: #a8b6d4; margin-top: 6px; }
+  .elapsed { font-size: 0.82rem; color: #6b80aa; margin-top: 6px; }
 
-  .breakdown-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 12px; }
+  .breakdown-title {
+    font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.07em;
+    color: var(--muted); margin-bottom: 10px;
+  }
   .section-result {
     background: #fff; border: 1px solid var(--border);
-    border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    border-radius: 12px; padding: 14px 16px; margin-bottom: 8px;
+    border-left: 4px solid var(--border);
   }
-  .section-result .sr-name { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
-  .section-result .sr-bar-wrap { height: 8px; background: var(--border); border-radius: 4px; margin-bottom: 4px; }
-  .section-result .sr-bar-fill { height: 8px; border-radius: 4px; transition: width 0.5s; }
-  .section-result .sr-pct { font-size: 0.8rem; color: var(--muted); }
-  .needs-work { border-left: 3px solid var(--red); }
-  .doing-well  { border-left: 3px solid var(--green); }
+  .section-result.needs-work { border-left-color: var(--red); }
+  .section-result.doing-well { border-left-color: var(--green); }
+  .sr-name { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .sr-bar-wrap { height: 8px; background: var(--border); border-radius: 4px; margin-bottom: 4px; }
+  .sr-bar-fill { height: 8px; border-radius: 4px; }
+  .sr-pct { font-size: 0.78rem; color: var(--muted); }
 
-  .results-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+  .results-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
   .results-actions button {
-    padding: 15px; border-radius: 12px; font-size: 0.95rem; font-weight: 700;
+    padding: 15px; border-radius: 12px;
+    font-size: 0.95rem; font-weight: 700;
     cursor: pointer; border: none;
     -webkit-tap-highlight-color: transparent;
   }
-  .btn-primary { background: var(--navy); color: #fff; }
+  .btn-primary   { background: var(--navy); color: #fff; }
   .btn-secondary { background: #fff; color: var(--navy); border: 1.5px solid var(--border) !important; }
+  .btn-purple    { background: var(--purple); color: #fff; }
   .btn-primary:active { background: #0f1a33; }
-
-  /* ── Utility ── */
-  .eagle { font-size: 2rem; margin-right: 4px; }
+  .btn-purple:active  { background: #412d78; }
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
-     HEADER (always visible)
-══════════════════════════════════════ -->
 <header>
-  <div>
-    <div class="eagle">⚓</div>
-  </div>
+  <div style="font-size:1.8rem">⚓</div>
   <div>
     <h1>SEA Exam Prep</h1>
     <div class="subtitle">Senior Enlisted Academy</div>
   </div>
 </header>
 
-<!-- ══════════════════════════════════════
-     HOME
-══════════════════════════════════════ -->
+<!-- ══════════ HOME ══════════ -->
 <div id="home" class="screen active">
-  <div style="padding: 24px 20px 0;">
-    <p class="welcome">Select a mode to begin. Your progress is saved on this device.</p>
+  <div style="padding:20px 20px 12px">
+    <p class="welcome">Three ways to study. Pick your mode.</p>
 
     <div class="mode-card" onclick="showSectionPicker('study')">
-      <h2>Study Mode</h2>
-      <p>Answer questions one at a time and get immediate feedback with explanations. Track which sections you need to review.</p>
-      <span class="badge badge-study">Instant Feedback</span>
+      <div class="mode-icon">📖</div>
+      <div>
+        <h2>Study Mode</h2>
+        <p>Pick sections, get immediate feedback and explanations after every answer.</p>
+        <span class="badge badge-study">Instant Feedback</span>
+      </div>
     </div>
 
-    <div class="mode-card" onclick="showSectionPicker('test')">
-      <h2>Test Mode</h2>
-      <p>Complete a timed practice exam with no hints. See your full score and section breakdown at the end.</p>
-      <span class="badge badge-test">Exam Simulation</span>
+    <div class="mode-card" onclick="showSectionPicker('drill')">
+      <div class="mode-icon">🎯</div>
+      <div>
+        <h2>Quick Drill</h2>
+        <p>10-question adaptive sessions. The app tracks what you know and keeps throwing your weak spots back at you until you own them.</p>
+        <span class="badge badge-drill">Adaptive</span>
+      </div>
+    </div>
+
+    <div class="mode-card" onclick="startTest()">
+      <div class="mode-icon">📋</div>
+      <div>
+        <h2>Test Mode</h2>
+        <p>25-question practice exam drawn from all sections. No hints. Full breakdown at the end.</p>
+        <span class="badge badge-test">Exam Simulation</span>
+      </div>
     </div>
   </div>
 
-  <div style="padding: 16px 20px 24px;">
-    <div class="stats-bar">
-      <h3>Your Progress by Section</h3>
-      <div class="section-grid" id="home-stats"></div>
+  <div style="padding:0 20px 28px">
+    <div class="progress-card">
+      <div class="progress-card-header">
+        <h3>Your Progress</h3>
+        <button class="reset-all-btn" onclick="confirmResetAll()">Reset All</button>
+      </div>
+      <div id="home-stats"></div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     SECTION PICKER
-══════════════════════════════════════ -->
+<!-- ══════════ SECTION PICKER ══════════ -->
 <div id="section-picker" class="screen">
   <button class="back-btn" onclick="showHome()">‹ Back</button>
   <div class="picker-title" id="picker-title">Choose Sections</div>
-  <div class="picker-sub" id="picker-sub">Select which sections to include.</div>
-
+  <div class="picker-sub" id="picker-sub"></div>
   <div class="select-all-row">
     <button class="select-all-btn" onclick="toggleSelectAll()">Select All</button>
   </div>
-
   <div id="section-list"></div>
   <button class="start-btn" id="start-btn" onclick="startSession()" disabled>Start</button>
 </div>
 
-<!-- ══════════════════════════════════════
-     QUIZ
-══════════════════════════════════════ -->
+<!-- ══════════ QUIZ ══════════ -->
 <div id="quiz" class="screen">
   <div class="quiz-header">
     <div>
-      <div class="q-counter" id="q-counter">Question 1 of 0</div>
-      <div class="section-label" id="q-section"></div>
+      <div class="q-counter" id="q-counter">Question 1 of 10</div>
+      <div class="q-section-label" id="q-section"></div>
     </div>
-    <div class="timer" id="timer">0:00</div>
+    <div class="q-timer" id="timer">0:00</div>
   </div>
-  <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="quiz-progress"><div class="quiz-progress-fill" id="progress-fill"></div></div>
+  <div class="drill-weight-bar" id="drill-weight-bar"></div>
 
   <div class="question-area">
-    <div class="q-type-badge" id="q-type-badge"></div>
+    <div class="q-type-label" id="q-type-label"></div>
     <div class="question-text" id="question-text"></div>
     <div class="options-list" id="options-list"></div>
   </div>
@@ -330,14 +366,13 @@
     <span id="feedback-text"></span>
   </div>
 
-  <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Question →</button>
+  <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next →</button>
 </div>
 
-<!-- ══════════════════════════════════════
-     RESULTS
-══════════════════════════════════════ -->
+<!-- ══════════ RESULTS ══════════ -->
 <div id="results" class="screen">
   <div class="result-hero">
+    <div class="result-mode-label" id="result-mode-label"></div>
     <div class="score-num" id="score-num">0%</div>
     <div class="score-label" id="score-label">0 of 0 correct</div>
     <div class="elapsed" id="elapsed-display"></div>
@@ -346,39 +381,37 @@
   <div class="breakdown-title">Section Breakdown</div>
   <div id="section-breakdown"></div>
 
-  <div class="results-actions">
-    <button class="btn-primary" onclick="retryWeak()">Study Weak Sections</button>
-    <button class="btn-secondary" onclick="showHome()">Back to Home</button>
-  </div>
+  <div class="results-actions" id="results-actions"></div>
 </div>
 
 <script>
-// ══════════════════════════════════════
-// Data & State
-// ══════════════════════════════════════
+// ════════════════════════════════════════
+// State
+// ════════════════════════════════════════
 let ALL_QUESTIONS = [];
 let SECTIONS = [];
-
-let mode = 'study';       // 'study' | 'test'
-let sessionQueue = [];    // questions for this session
+let mode = 'study';
+let sessionQueue = [];
 let currentIdx = 0;
 let correct = 0;
-let answered = 0;
 let startTime = null;
 let timerInterval = null;
 let selectedSections = new Set();
+let sessionResults = {};   // { section: { correct, total } }
 
-// sessionResults[sectionName] = { correct: N, total: N }
-let sessionResults = {};
+// ════════════════════════════════════════
+// LocalStorage helpers
+// ════════════════════════════════════════
+const LS_HISTORY = 'sea_history';   // { section: { correct, total } }
+const LS_DRILL   = 'sea_drill';     // { questionId: { correct, wrong } }
 
-// Persistent history in localStorage
-function getHistory() {
-  return JSON.parse(localStorage.getItem('sea_history') || '{}');
-}
-function saveHistory(h) {
-  localStorage.setItem('sea_history', JSON.stringify(h));
-}
-function recordResult(section, wasCorrect) {
+function getHistory() { return JSON.parse(localStorage.getItem(LS_HISTORY) || '{}'); }
+function saveHistory(h) { localStorage.setItem(LS_HISTORY, JSON.stringify(h)); }
+
+function getDrill() { return JSON.parse(localStorage.getItem(LS_DRILL) || '{}'); }
+function saveDrill(d) { localStorage.setItem(LS_DRILL, JSON.stringify(d)); }
+
+function recordHistory(section, wasCorrect) {
   const h = getHistory();
   if (!h[section]) h[section] = { correct: 0, total: 0 };
   h[section].total++;
@@ -386,24 +419,52 @@ function recordResult(section, wasCorrect) {
   saveHistory(h);
 }
 
-// ══════════════════════════════════════
+function recordDrill(qId, wasCorrect) {
+  const d = getDrill();
+  if (!d[qId]) d[qId] = { correct: 0, wrong: 0 };
+  if (wasCorrect) d[qId].correct++;
+  else d[qId].wrong++;
+  saveDrill(d);
+}
+
+function resetSection(section) {
+  const h = getHistory();
+  delete h[section];
+  saveHistory(h);
+
+  // Reset drill data for questions in this section
+  const d = getDrill();
+  ALL_QUESTIONS.forEach((q, i) => { if (q.section === section) delete d[i]; });
+  saveDrill(d);
+
+  renderHomeStats();
+}
+
+function confirmResetAll() {
+  if (confirm('Reset all progress and drill history?')) {
+    localStorage.removeItem(LS_HISTORY);
+    localStorage.removeItem(LS_DRILL);
+    renderHomeStats();
+  }
+}
+
+// ════════════════════════════════════════
 // Boot
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 async function boot() {
   try {
     const res = await fetch('questions.json');
     ALL_QUESTIONS = await res.json();
     SECTIONS = [...new Set(ALL_QUESTIONS.map(q => q.section))];
     renderHomeStats();
-  } catch (e) {
-    document.querySelector('.welcome').textContent =
-      'Error loading questions.json. Make sure it is in the same folder as index.html.';
+  } catch(e) {
+    document.querySelector('.welcome').textContent = 'Error loading questions.json.';
   }
 }
 
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 // Home
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 function showHome() {
   clearInterval(timerInterval);
   renderHomeStats();
@@ -413,43 +474,48 @@ function showHome() {
 function renderHomeStats() {
   const h = getHistory();
   const el = document.getElementById('home-stats');
-  if (SECTIONS.length === 0) { el.innerHTML = '<div style="color:#aaa;font-size:0.85rem;">No data yet.</div>'; return; }
+  if (!SECTIONS.length) { el.innerHTML = '<div style="color:#aaa;font-size:0.85rem">No data yet.</div>'; return; }
+
   el.innerHTML = SECTIONS.map(s => {
     const d = h[s] || { correct: 0, total: 0 };
     const pct = d.total ? Math.round((d.correct / d.total) * 100) : 0;
+    const color = pct >= 70 ? 'var(--green)' : pct >= 40 ? 'var(--gold)' : d.total ? 'var(--red)' : 'var(--border)';
     return `<div class="section-stat">
-      <div class="name">${s}</div>
-      <div class="bar-row">
-        <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
-        <div class="pct">${d.total ? d.correct + '/' + d.total + ' · ' + pct + '%' : 'Not started'}</div>
+      <div class="stat-row">
+        <div class="stat-name">${s}</div>
+        <div class="stat-meta">
+          <div class="stat-pct">${d.total ? d.correct+'/'+d.total+' · '+pct+'%' : 'Not started'}</div>
+          ${d.total ? `<button class="stat-reset" onclick="resetSection('${s.replace(/'/g,"\\'")}')">reset</button>` : ''}
+        </div>
       </div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%;background:${color}"></div></div>
     </div>`;
   }).join('');
 }
 
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 // Section Picker
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 function showSectionPicker(selectedMode) {
   mode = selectedMode;
   selectedSections.clear();
 
   document.getElementById('picker-title').textContent =
-    mode === 'study' ? 'Study Mode — Choose Sections' : 'Test Mode — Choose Sections';
+    mode === 'study' ? 'Study Mode' : 'Quick Drill';
   document.getElementById('picker-sub').textContent =
     mode === 'study'
-      ? 'Pick sections to study. You can mix and match.'
-      : 'Select which sections to include in your practice exam.';
+      ? 'Pick sections to study. Get immediate feedback after each answer.'
+      : 'Pick sections to drill. 10 adaptive questions — your weak spots come back more often.';
 
   const list = document.getElementById('section-list');
   list.innerHTML = SECTIONS.map(s => {
     const count = ALL_QUESTIONS.filter(q => q.section === s).length;
-    return `<div class="section-option" id="opt-${sanitize(s)}" onclick="toggleSection('${s.replace(/'/g,"\\'")}')">
+    return `<div class="section-option" id="opt-${sid(s)}" onclick="toggleSection('${s.replace(/'/g,"\\'")}')">
       <div>
         <div class="sec-name">${s}</div>
         <div class="sec-count">${count} questions</div>
       </div>
-      <div class="checkmark" id="chk-${sanitize(s)}"></div>
+      <div class="checkmark" id="chk-${sid(s)}"></div>
     </div>`;
   }).join('');
 
@@ -457,249 +523,279 @@ function showSectionPicker(selectedMode) {
   showScreen('section-picker');
 }
 
-function sanitize(s) { return s.replace(/[^a-zA-Z0-9]/g, '_'); }
+function sid(s) { return s.replace(/[^a-zA-Z0-9]/g,'_'); }
 
 function toggleSection(s) {
   if (selectedSections.has(s)) selectedSections.delete(s);
   else selectedSections.add(s);
-  const el = document.getElementById('opt-' + sanitize(s));
-  const chk = document.getElementById('chk-' + sanitize(s));
-  if (selectedSections.has(s)) {
-    el.classList.add('selected');
-    chk.textContent = '✓';
-  } else {
-    el.classList.remove('selected');
-    chk.textContent = '';
-  }
+  document.getElementById('opt-'+sid(s)).classList.toggle('selected', selectedSections.has(s));
+  document.getElementById('chk-'+sid(s)).textContent = selectedSections.has(s) ? '✓' : '';
   updateStartBtn();
 }
 
 function toggleSelectAll() {
-  const allSelected = selectedSections.size === SECTIONS.length;
-  if (allSelected) {
-    selectedSections.clear();
-  } else {
-    SECTIONS.forEach(s => selectedSections.add(s));
-  }
+  const all = selectedSections.size === SECTIONS.length;
+  selectedSections = all ? new Set() : new Set(SECTIONS);
   SECTIONS.forEach(s => {
-    const el = document.getElementById('opt-' + sanitize(s));
-    const chk = document.getElementById('chk-' + sanitize(s));
-    if (selectedSections.has(s)) {
-      el.classList.add('selected');
-      chk.textContent = '✓';
-    } else {
-      el.classList.remove('selected');
-      chk.textContent = '';
-    }
+    document.getElementById('opt-'+sid(s)).classList.toggle('selected', selectedSections.has(s));
+    document.getElementById('chk-'+sid(s)).textContent = selectedSections.has(s) ? '✓' : '';
   });
   updateStartBtn();
 }
 
 function updateStartBtn() {
   const btn = document.getElementById('start-btn');
-  const n = selectedSections.size;
-  btn.disabled = n === 0;
-  if (n > 0) {
-    const total = ALL_QUESTIONS.filter(q => selectedSections.has(q.section)).length;
-    btn.textContent = `Start (${total} questions)`;
-  } else {
-    btn.textContent = 'Start';
-  }
+  const total = mode === 'drill' ? 10 : ALL_QUESTIONS.filter(q => selectedSections.has(q.section)).length;
+  btn.disabled = selectedSections.size === 0;
+  btn.textContent = selectedSections.size
+    ? `Start${mode === 'drill' ? ' Drill' : ''} (${mode === 'drill' ? 10 : total} questions)`
+    : 'Start';
 }
 
-// ══════════════════════════════════════
-// Session
-// ══════════════════════════════════════
+// ════════════════════════════════════════
+// Session builders
+// ════════════════════════════════════════
 function shuffle(arr) {
   const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+  for (let i = a.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i+1));
+    [a[i],a[j]] = [a[j],a[i]];
   }
   return a;
 }
 
+// Weighted random pick — higher weight = more likely
+function weightedSample(items, weights, n) {
+  const result = [];
+  const remaining = items.map((item, i) => ({ item, weight: weights[i] }));
+  for (let pick = 0; pick < n && remaining.length > 0; pick++) {
+    const total = remaining.reduce((s, x) => s + x.weight, 0);
+    let r = Math.random() * total;
+    for (let i = 0; i < remaining.length; i++) {
+      r -= remaining[i].weight;
+      if (r <= 0) { result.push(remaining[i].item); remaining.splice(i, 1); break; }
+    }
+  }
+  return result;
+}
+
+function drillWeight(qIdx) {
+  const d = getDrill()[qIdx] || { correct: 0, wrong: 0 };
+  // Base weight 3; each wrong +2, each correct -1 (min 1)
+  return Math.max(1, 3 + (d.wrong * 2) - d.correct);
+}
+
 function startSession() {
-  sessionQueue = shuffle(ALL_QUESTIONS.filter(q => selectedSections.has(q.section)));
+  const pool = ALL_QUESTIONS
+    .map((q, i) => ({ q, i }))
+    .filter(({ q }) => selectedSections.has(q.section));
+
+  if (mode === 'drill') {
+    const weights = pool.map(({ i }) => drillWeight(i));
+    const picked = weightedSample(pool, weights, 10);
+    sessionQueue = picked.map(({ q }) => q);
+    // store index alongside for drill tracking
+    sessionQueue = picked.map(({ q, i }) => ({ ...q, _idx: i }));
+  } else {
+    sessionQueue = shuffle(pool.map(({ q }) => q));
+  }
+
+  initSession();
+}
+
+// Test mode — 25 questions proportionally sampled across ALL sections
+function startTest() {
+  mode = 'test';
+  const bySection = {};
+  ALL_QUESTIONS.forEach((q, i) => {
+    if (!bySection[q.section]) bySection[q.section] = [];
+    bySection[q.section].push({ q, i });
+  });
+
+  const sectionNames = Object.keys(bySection);
+  const total = 25;
+  const perSection = Math.floor(total / sectionNames.length);
+  let remainder = total - (perSection * sectionNames.length);
+
+  sessionQueue = [];
+  sectionNames.forEach(s => {
+    const pool = shuffle(bySection[s]);
+    const take = perSection + (remainder-- > 0 ? 1 : 0);
+    pool.slice(0, take).forEach(({ q }) => sessionQueue.push(q));
+  });
+  sessionQueue = shuffle(sessionQueue);
+
+  initSession();
+}
+
+function initSession() {
   currentIdx = 0;
   correct = 0;
-  answered = 0;
   sessionResults = {};
   selectedSections.forEach(s => sessionResults[s] = { correct: 0, total: 0 });
+  // Also init for test mode which doesn't use selectedSections
+  sessionQueue.forEach(q => {
+    if (!sessionResults[q.section]) sessionResults[q.section] = { correct: 0, total: 0 };
+  });
 
   startTime = Date.now();
   clearInterval(timerInterval);
   timerInterval = setInterval(updateTimer, 1000);
 
+  document.getElementById('drill-weight-bar').classList.toggle('show', mode === 'drill');
   showScreen('quiz');
   renderQuestion();
 }
 
+// ════════════════════════════════════════
+// Timer
+// ════════════════════════════════════════
 function updateTimer() {
-  const elapsed = Math.floor((Date.now() - startTime) / 1000);
-  const m = Math.floor(elapsed / 60);
-  const s = elapsed % 60;
-  document.getElementById('timer').textContent = `${m}:${s.toString().padStart(2,'0')}`;
+  const e = Math.floor((Date.now() - startTime) / 1000);
+  document.getElementById('timer').textContent = `${Math.floor(e/60)}:${String(e%60).padStart(2,'0')}`;
+}
+function elapsedStr() {
+  const e = Math.floor((Date.now() - startTime) / 1000);
+  return `${Math.floor(e/60)}m ${e%60}s`;
 }
 
-function formatElapsed() {
-  const elapsed = Math.floor((Date.now() - startTime) / 1000);
-  const m = Math.floor(elapsed / 60);
-  const s = elapsed % 60;
-  return `${m}m ${s}s`;
-}
-
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 // Question rendering
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 function renderQuestion() {
   const q = sessionQueue[currentIdx];
   const total = sessionQueue.length;
 
-  document.getElementById('q-counter').textContent = `Question ${currentIdx + 1} of ${total}`;
+  document.getElementById('q-counter').textContent = `Question ${currentIdx+1} of ${total}`;
   document.getElementById('q-section').textContent = q.section;
-  document.getElementById('q-type-badge').textContent = q.type === 'mcq' ? 'Multiple Choice' : 'True / False';
+  document.getElementById('q-type-label').textContent = q.type === 'mcq' ? 'Multiple Choice' : 'True / False';
   document.getElementById('question-text').textContent = q.question;
+  document.getElementById('progress-fill').style.width = ((currentIdx/total)*100) + '%';
 
-  const pct = (currentIdx / total) * 100;
-  document.getElementById('progress-fill').style.width = pct + '%';
-
-  const fb = document.getElementById('feedback-box');
-  fb.className = 'feedback-box';
+  // Reset feedback
+  document.getElementById('feedback-box').className = 'feedback-box';
   document.getElementById('next-btn').className = 'next-btn';
 
   const list = document.getElementById('options-list');
   list.innerHTML = '';
 
-  if (q.type === 'mcq') {
-    q.options.forEach(opt => {
-      const btn = document.createElement('button');
-      btn.className = 'option-btn';
-      btn.textContent = opt;
-      btn.onclick = () => answerMCQ(opt.charAt(0), q);
-      list.appendChild(btn);
-    });
-  } else {
-    ['True', 'False'].forEach(val => {
-      const btn = document.createElement('button');
-      btn.className = 'option-btn';
-      btn.textContent = val;
-      btn.onclick = () => answerTF(val, q);
-      list.appendChild(btn);
-    });
-  }
+  const choices = q.type === 'mcq' ? q.options : ['True', 'False'];
+  choices.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.textContent = opt;
+    btn.onclick = () => handleAnswer(q.type === 'mcq' ? opt.charAt(0) : opt, q);
+    list.appendChild(btn);
+  });
 }
 
-function answerMCQ(chosen, q) {
+function handleAnswer(chosen, q) {
   const isCorrect = chosen === q.correct;
-  revealAnswer(isCorrect, q);
+  const isLast = currentIdx === sessionQueue.length - 1;
+
+  // Update counts
+  correct += isCorrect ? 1 : 0;
+  sessionResults[q.section].total++;
+  if (isCorrect) sessionResults[q.section].correct++;
+  recordHistory(q.section, isCorrect);
+  if (mode === 'drill' && q._idx !== undefined) recordDrill(q._idx, isCorrect);
 
   // Highlight buttons
   document.querySelectorAll('.option-btn').forEach(btn => {
     btn.disabled = true;
-    const letter = btn.textContent.charAt(0);
-    if (letter === q.correct) btn.classList.add('correct');
-    else if (letter === chosen && !isCorrect) btn.classList.add('wrong');
+    const val = q.type === 'mcq' ? btn.textContent.charAt(0) : btn.textContent;
+    if (val === q.correct) btn.classList.add('correct');
+    else if (val === chosen && !isCorrect) btn.classList.add('wrong');
   });
-}
 
-function answerTF(chosen, q) {
-  const isCorrect = chosen === q.correct;
-  revealAnswer(isCorrect, q);
-
-  document.querySelectorAll('.option-btn').forEach(btn => {
-    btn.disabled = true;
-    if (btn.textContent === q.correct) btn.classList.add('correct');
-    else if (btn.textContent === chosen && !isCorrect) btn.classList.add('wrong');
-  });
-}
-
-function revealAnswer(isCorrect, q) {
-  answered++;
-  if (isCorrect) correct++;
-
-  // Update session breakdown
-  sessionResults[q.section].total++;
-  if (isCorrect) sessionResults[q.section].correct++;
-
-  // Persist to history
-  recordResult(q.section, isCorrect);
-
-  if (mode === 'study') {
+  // Show feedback in study/drill modes
+  if (mode !== 'test') {
     const fb = document.getElementById('feedback-box');
     fb.className = 'feedback-box show ' + (isCorrect ? 'correct' : 'wrong');
     document.getElementById('feedback-verdict').textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
     document.getElementById('feedback-text').textContent = q.explanation;
   }
 
-  const isLast = currentIdx === sessionQueue.length - 1;
   const nextBtn = document.getElementById('next-btn');
   nextBtn.className = 'next-btn show';
-  nextBtn.textContent = isLast ? 'See Results' : 'Next Question →';
+  nextBtn.textContent = isLast ? 'See Results' : 'Next →';
 }
 
 function nextQuestion() {
-  if (currentIdx === sessionQueue.length - 1) {
-    showResults();
-  } else {
-    currentIdx++;
-    renderQuestion();
-  }
+  if (currentIdx === sessionQueue.length - 1) showResults();
+  else { currentIdx++; renderQuestion(); }
 }
 
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 // Results
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 function showResults() {
   clearInterval(timerInterval);
   const total = sessionQueue.length;
   const pct = Math.round((correct / total) * 100);
 
+  const modeLabels = { study: 'Study Mode', drill: 'Quick Drill', test: 'Test Mode' };
+  document.getElementById('result-mode-label').textContent = modeLabels[mode];
   document.getElementById('score-num').textContent = pct + '%';
   document.getElementById('score-label').textContent = `${correct} of ${total} correct`;
-  document.getElementById('elapsed-display').textContent = 'Time: ' + formatElapsed();
+  document.getElementById('elapsed-display').textContent = 'Time: ' + elapsedStr();
 
-  const breakdown = document.getElementById('section-breakdown');
   const entries = Object.entries(sessionResults)
-    .filter(([, d]) => d.total > 0)
-    .sort((a, b) => {
-      const pa = a[1].correct / a[1].total;
-      const pb = b[1].correct / b[1].total;
-      return pa - pb; // worst first
-    });
+    .filter(([,d]) => d.total > 0)
+    .sort((a,b) => (a[1].correct/a[1].total) - (b[1].correct/b[1].total));
 
-  breakdown.innerHTML = entries.map(([sec, d]) => {
-    const p = Math.round((d.correct / d.total) * 100);
-    const cls = p >= 70 ? 'doing-well' : 'needs-work';
-    const color = p >= 70 ? '#2e7d4f' : '#b53a2f';
-    return `<div class="section-result ${cls}">
+  document.getElementById('section-breakdown').innerHTML = entries.map(([sec,d]) => {
+    const p = Math.round((d.correct/d.total)*100);
+    const good = p >= 70;
+    const color = good ? 'var(--green)' : 'var(--red)';
+    return `<div class="section-result ${good ? 'doing-well' : 'needs-work'}">
       <div class="sr-name">${sec}</div>
       <div class="sr-bar-wrap"><div class="sr-bar-fill" style="width:${p}%;background:${color}"></div></div>
-      <div class="sr-pct">${d.correct}/${d.total} correct — ${p}%</div>
+      <div class="sr-pct">${d.correct}/${d.total} · ${p}%${!good ? ' — needs work' : ''}</div>
     </div>`;
   }).join('');
+
+  // Action buttons
+  const weakSections = entries.filter(([,d]) => (d.correct/d.total) < 0.7).map(([s]) => s);
+  const actions = document.getElementById('results-actions');
+  actions.innerHTML = '';
+
+  if (weakSections.length && mode !== 'study') {
+    const drillWeak = document.createElement('button');
+    drillWeak.className = 'btn-purple';
+    drillWeak.textContent = `Drill Weak Sections (${weakSections.length})`;
+    drillWeak.onclick = () => {
+      mode = 'drill';
+      selectedSections = new Set(weakSections);
+      startSession();
+    };
+    actions.appendChild(drillWeak);
+  }
+
+  if (mode === 'drill') {
+    const again = document.createElement('button');
+    again.className = 'btn-primary';
+    again.textContent = 'Drill Again';
+    again.onclick = startSession;
+    actions.appendChild(again);
+  }
+
+  const home = document.createElement('button');
+  home.className = 'btn-secondary';
+  home.textContent = 'Back to Home';
+  home.onclick = showHome;
+  actions.appendChild(home);
 
   showScreen('results');
 }
 
-function retryWeak() {
-  // Pre-select sections below 70%
-  const weakSections = Object.entries(sessionResults)
-    .filter(([, d]) => d.total > 0 && (d.correct / d.total) < 0.7)
-    .map(([s]) => s);
-
-  mode = 'study';
-  selectedSections = new Set(weakSections.length ? weakSections : SECTIONS);
-  startSession();
-}
-
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 // Screen routing
-// ══════════════════════════════════════
+// ════════════════════════════════════════
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  window.scrollTo(0, 0);
+  window.scrollTo(0,0);
 }
 
 boot();
