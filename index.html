@@ -308,6 +308,11 @@
     padding: 8px 16px;
     background: #fff;
     border-bottom: 1px solid var(--border);
+    min-height: 44px;
+  }
+  .quiz-action-bar .qa-btn[style*="display: none"] + .qa-btn,
+  .quiz-action-bar .qa-btn:first-child[style*="display: none"] {
+    margin-left: auto;
   }
   .qa-btn {
     background: none; border: none;
@@ -857,9 +862,10 @@ function renderQuestion() {
   skipBtn.style.display = '';
   skipBtn.disabled = (mode !== 'test') && isAnswered;
 
-  // Reset feedback & next btn
+  // Reset feedback & next btn for every render
   document.getElementById('feedback-box').className = 'feedback-box';
   document.getElementById('next-btn').className = 'next-btn';
+  document.getElementById('next-btn').textContent = isLast ? 'See Results' : 'Next →';
 
   const list = document.getElementById('options-list');
   list.innerHTML = '';
@@ -943,6 +949,10 @@ function skipQuestion() {
   if (currentIdx < sessionQueue.length - 1) {
     currentIdx++;
     renderQuestion();
+  } else {
+    // Skipped the last question — end the session
+    if (mode === 'test') showTestReview();
+    else showResults();
   }
 }
 
@@ -1030,16 +1040,18 @@ function goBackToTest() {
 }
 
 function submitTest() {
-  // Score all test answers
   correct = 0;
   sessionQueue.forEach((q, i) => {
     const chosen = testAnswers[i];
-    if (chosen === undefined) return; // unanswered — counts as wrong
-    const isCorrect = chosen === q.correct;
-    if (isCorrect) correct++;
+    const isCorrect = chosen !== undefined && chosen === q.correct;
+    // Count every question in the section total (answered or not)
     sessionResults[q.section].total++;
-    if (isCorrect) sessionResults[q.section].correct++;
-    recordHistory(q.section, isCorrect);
+    if (isCorrect) {
+      correct++;
+      sessionResults[q.section].correct++;
+    }
+    // Only record history for questions that were actually answered
+    if (chosen !== undefined) recordHistory(q.section, isCorrect);
   });
   showResults();
 }
