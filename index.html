@@ -762,26 +762,36 @@ function startByersCup() {
   mode = 'study';
 
   const keywords = [
-    // 8 power bases
     'power base', 'coercive', 'referent', 'legitimate power', 'reward power',
     'connection power', 'information power', 'expert power', 'empowerment',
     'eight power', '8 power',
-    // Johari Window
     'johari', 'blind spot', 'open area', 'hidden area', 'facade', 'public arena',
-    // Frustrated behaviors
     'frustrated behav', 'rationalization', 'regression', 'fixation',
-    'resignation', 'withdrawal', 'motive is blocked', 'goal is blocked',
-    'blocked motive',
-    // Define power
-    'influence potential', 'define power', 'power is influence',
-    'compliance or commitment',
-    // Position vs personal power
+    'resignation', 'withdrawal', 'motive is blocked', 'goal is blocked', 'blocked motive',
+    'influence potential', 'define power', 'power is influence', 'compliance or commitment',
     'position power', 'personal power', 'positional power',
+  ];
+
+  // Strip scenarios and chart-dependent questions — keep pure recall/definition only
+  const scenarioWords = [
+    'a chief', 'a petty officer', 'a senior chief', 'a master chief',
+    'a sailor', 'a commanding officer', 'a junior', 'a senior enlisted',
+    'a sergeant', 'a staff nco', 'a command master', 'notices that',
+    'observes that', 'finds that', 'has been', 'during a', 'after failing',
+    'following a', 'a new command', 'recently', 'a department', 'a division',
+    'a highly', 'a follower', 'rated r1', 'rated r2', 'rated r3', 'rated r4',
+    'readiness level', 'r1 —', 'r2 —', 'r3 —', 'r4 —',
+    'at r1', 'at r2', 'at r3', 'at r4',
+    'a leader who', 'a leader can', 'a leader should',
+    'groupthink', 'situational leadership', 'joint task',
+    'a senior leader', 'a staff',
   ];
 
   const pool = ALL_QUESTIONS.filter(q => {
     const text = (q.question + ' ' + q.explanation).toLowerCase();
-    return keywords.some(k => text.includes(k.toLowerCase()));
+    if (!keywords.some(k => text.includes(k.toLowerCase()))) return false;
+    if (scenarioWords.some(s => q.question.toLowerCase().includes(s))) return false;
+    return true;
   });
 
   sessionQueue = shuffle(pool);
