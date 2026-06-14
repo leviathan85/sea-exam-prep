@@ -2994,5 +2994,143 @@
     "explanation": "Connection power is matched to the R1\u2013R2 transition range. Followers here begin to respond to the leader's network and standing, motivated by a desire to avoid negative consequences or benefit from the leader's connections.",
     "section": "6.0 Power Summary",
     "image": "power_bases.png"
+  },
+  {
+    "type": "mcq",
+    "question": "A Chief Petty Officer notices that a Petty Officer First Class has been passed over for promotion twice. The Sailor now responds to every new tasking by immediately saying he cannot complete it and stops trying after minimal effort. Which frustrated behavior best describes this response?",
+    "options": [
+      "A. Aggression",
+      "B. Fixation",
+      "C. Resignation/Withdrawal",
+      "D. Regression"
+    ],
+    "correct": "C",
+    "explanation": "Resignation/Withdrawal occurs when an individual gives up and disengages entirely after a motive or goal is repeatedly blocked. The Sailor's refusal to engage with new tasks reflects a complete disengagement from effort.",
+    "section": "5.2 Human Behavior"
+  },
+  {
+    "type": "mcq",
+    "question": "During a command assessment, a Senior Chief observes that a Petty Officer Second Class continues to submit the same poorly formatted work package week after week, even after multiple counseling sessions and clear corrective guidance. Which frustrated behavior is this Sailor exhibiting?",
+    "options": [
+      "A. Rationalization",
+      "B. Fixation",
+      "C. Displacement",
+      "D. Regression"
+    ],
+    "correct": "B",
+    "explanation": "Fixation is the repetition of the same failed behavior regardless of the outcome or corrective feedback received. The Sailor's continued submission of incorrect work packages despite repeated counseling is a classic example of fixation.",
+    "section": "5.2 Human Behavior"
+  },
+  {
+    "type": "mcq",
+    "question": "After failing to qualify for a special duty assignment, a Petty Officer tells her division officer, 'I didn't really want that billet anyway \u2014 the hours would have been terrible and the work is boring.' Which frustrated behavior is she demonstrating?",
+    "options": [
+      "A. Regression",
+      "B. Aggression",
+      "C. Rationalization",
+      "D. Fixation"
+    ],
+    "correct": "C",
+    "explanation": "Rationalization involves making excuses or reframing a failure to protect one's self-esteem and justify a shortcoming. The Sailor is minimizing the value of the blocked goal rather than confronting the real cause of her disappointment.",
+    "section": "5.2 Human Behavior"
+  },
+  {
+    "type": "mcq",
+    "question": "A Commanding Officer is frustrated by a budget decision made at the fleet level that limits her command's training funds. Rather than address the issue through proper channels, she begins snapping at her Executive Officer and berating department heads in routine meetings. Which frustrated behavior best describes her conduct?",
+    "options": [
+      "A. Fixation",
+      "B. Rationalization",
+      "C. Displaced Aggression",
+      "D. Resignation/Withdrawal"
+    ],
+    "correct": "C",
+    "explanation": "Displaced aggression occurs when an individual cannot attack the actual obstacle and redirects hostility toward other people or objects. The Commanding Officer is venting frustration on her staff rather than addressing the true source of her blocked motive.",
+    "section": "5.2 Human Behavior"
+  },
+  {
+    "type": "tf",
+    "question": "When a leader identifies a frustrated behavior in a subordinate, the most effective response is to address the visible behavior directly rather than investigating the underlying blocked motive.",
+    "correct": "False",
+    "explanation": "Leaders must recognize frustrated behaviors as symptoms of a blocked motive or goal. Addressing only the surface behavior without identifying and resolving the root cause will not eliminate the frustrated behavior.",
+    "section": "5.2 Human Behavior"
+  },
+  {
+    "type": "mcq",
+    "question": "A Master Chief observes that a highly competent Petty Officer First Class, following a public reprimand from her division officer, begins making sarcastic comments in meetings, openly rolling her eyes, and refusing to engage with peers \u2014 behaviors she had not displayed in years. Which frustrated behavior does this most likely represent?",
+    "options": [
+      "A. Rationalization",
+      "B. Regression",
+      "C. Fixation",
+      "D. Resignation/Withdrawal"
+    ],
+    "correct": "B",
+    "explanation": "Regression involves reverting to earlier, less mature behaviors when an individual is under stress or when a motive is blocked. The Sailor's return to immature conduct following a stressful event is consistent with regressive behavior.",
+    "section": "5.2 Human Behavior"
+  },
+  {
+    "type": "tf",
+    "question": "Position power and personal power are both forms of influence potential, but personal power is earned from followers through trust and respect, while position power is granted by the organization and can be removed.",
+    "correct": "True",
+    "explanation": "Position power flows from the organization, can be delegated, and can be taken back, while personal power is earned from followers and is based on trust, respect, and credibility. Both are forms of influence potential available to leaders.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "type": "mcq",
+    "question": "A newly frocked Chief Petty Officer finds that Sailors in her division comply with her directions but show little commitment or initiative. A senior mentor suggests she focus on developing expert and referent power. Why would this approach be more effective than relying solely on her new rank?",
+    "options": [
+      "A. Expert and referent power eliminate the need for legitimate authority entirely.",
+      "B. Personal power generates commitment from followers, whereas position power alone typically produces only compliance.",
+      "C. Rank-based authority is not recognized below the Chief Petty Officer level.",
+      "D. Referent power is a form of position power that reinforces legitimate authority."
+    ],
+    "correct": "B",
+    "explanation": "Personal power \u2014 including expert and referent power \u2014 is earned through trust and respect and tends to produce commitment rather than mere compliance. Position power alone, such as legitimate authority from rank, generally produces compliance but not the higher engagement that effective leadership requires.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "type": "mcq",
+    "question": "A Senior Enlisted Leader is known throughout the command for his deep technical expertise in his rating and his genuine concern for his Sailors' careers. Junior Sailors frequently seek his guidance even on matters outside his formal authority. Which types of power does this leader primarily demonstrate?",
+    "options": [
+      "A. Legitimate and Coercive",
+      "B. Connection and Information",
+      "C. Expert and Referent",
+      "D. Reward and Empowerment"
+    ],
+    "correct": "C",
+    "explanation": "Expert power derives from a leader's knowledge, skill, and technical competence, while referent power is based on admiration and respect earned from followers. Both are forms of personal power that cause others to seek out the leader's guidance voluntarily.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "type": "mcq",
+    "question": "A department head tells a junior officer, 'I can make or break your next fitness report,' and uses that threat to gain compliance with a questionable administrative decision. Which type of power is the department head using?",
+    "options": [
+      "A. Referent",
+      "B. Connection",
+      "C. Coercive",
+      "D. Empowerment"
+    ],
+    "correct": "C",
+    "explanation": "Coercive power is a form of position power that relies on the threat of punishment or negative consequences to gain compliance. Using the threat of a negative fitness report evaluation is a direct application of coercive power.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "type": "tf",
+    "question": "Power operates through perception, meaning that if followers do not believe a leader possesses power, that leader will be unable to effectively use it regardless of their formal authority.",
+    "correct": "True",
+    "explanation": "Power functions based on the perception of followers. If Sailors do not believe a leader has the ability to reward, punish, or influence outcomes, the leader's power \u2014 whether positional or personal \u2014 will have little practical effect.",
+    "section": "6.0 Power Summary"
+  },
+  {
+    "type": "mcq",
+    "question": "In a situation where a leader has limited position power \u2014 such as when leading a joint task force of peers \u2014 which approach to influencing others is most effective?",
+    "options": [
+      "A. Relying on connection power by invoking the names of senior officers",
+      "B. Issuing formal orders using legitimate authority",
+      "C. Building personal power through demonstrated expertise and earning the trust and respect of the group",
+      "D. Withholding information to create dependency among peers"
+    ],
+    "correct": "C",
+    "explanation": "When position power is limited or absent, personal power \u2014 built through expert knowledge, credibility, and the trust and respect of others \u2014 is the most effective and sustainable source of influence. Where only one form of power is possible, personal power is preferable to position power alone.",
+    "section": "6.0 Power Summary"
   }
 ]
