@@ -416,6 +416,15 @@
       </div>
     </div>
 
+    <div class="mode-card" onclick="startByersCup()">
+      <div class="mode-icon">🏆</div>
+      <div>
+        <h2>Byer's Cup Prep</h2>
+        <p>Focused drill on the 5 high-priority topics: 8 power bases, Johari Window, frustrated behaviors, defining power, and position vs. personal power.</p>
+        <span class="badge" style="background:#fff3e0;color:#b36200">Priority Topics</span>
+      </div>
+    </div>
+
   </div>
 
   <div style="padding:0 20px 28px">
@@ -745,6 +754,38 @@ function startSession() {
     sessionQueue = shuffle(pool.map(({ q }) => q));
   }
 
+  initSession();
+}
+
+// Byer's Cup — filtered questions on 5 priority topics
+function startByersCup() {
+  mode = 'study';
+
+  const keywords = [
+    // 8 power bases
+    'power base', 'coercive', 'referent', 'legitimate power', 'reward power',
+    'connection power', 'information power', 'expert power', 'empowerment',
+    'eight power', '8 power',
+    // Johari Window
+    'johari', 'blind spot', 'open area', 'hidden area', 'facade', 'public arena',
+    // Frustrated behaviors
+    'frustrated behav', 'rationalization', 'regression', 'fixation',
+    'resignation', 'withdrawal', 'motive is blocked', 'goal is blocked',
+    'blocked motive',
+    // Define power
+    'influence potential', 'define power', 'power is influence',
+    'compliance or commitment',
+    // Position vs personal power
+    'position power', 'personal power', 'positional power',
+  ];
+
+  const pool = ALL_QUESTIONS.filter(q => {
+    const text = (q.question + ' ' + q.explanation).toLowerCase();
+    return keywords.some(k => text.includes(k.toLowerCase()));
+  });
+
+  sessionQueue = shuffle(pool);
+  selectedSections = new Set(pool.map(q => q.section));
   initSession();
 }
 
