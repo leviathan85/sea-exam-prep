@@ -2851,20 +2851,6 @@
   },
   {
     "type": "mcq",
-    "question": "In the Situational Leadership model, which two styles are identified as the 'risky styles' and why?",
-    "options": [
-      "A. S2 and S3, because they require the most time and energy from the leader",
-      "B. S1 and S4, because one is always the lowest-probability choice in any given situation",
-      "C. S1 and S2, because they are both leader-directed and easily over-applied",
-      "D. S3 and S4, because they reduce leader involvement and risk mission failure"
-    ],
-    "correct": "B",
-    "explanation": "S1 and S4 are the risky styles because one is always the lowest-probability correct choice. Leaders who default to either extreme \u2014 over-directing or over-delegating \u2014 risk mismatching their style to the follower's actual readiness level.",
-    "section": "6.1 Good Order and Discipline",
-    "image": "situational_leadership.png"
-  },
-  {
-    "type": "mcq",
     "question": "In the Situational Leadership model, a follower is technically skilled and experienced but has become resistant and unmotivated due to a disagreement with the team. Which readiness level and leadership style applies?",
     "options": [
       "A. R1 \u2014 S1 Telling",
