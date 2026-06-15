@@ -154,12 +154,12 @@
     "type": "tf",
     "question": "Virtual presentations follow a different set of development steps than face-to-face presentations because of the unique technical demands of the online environment.",
     "correct": "False",
-    "explanation": "Virtual presentations follow the same eight steps of presentation development as a face-to-face brief. The difference lies in setup and delivery considerations, not the development process itself.",
+    "explanation": "Virtual presentations follow the same eight steps of presentation development as a face-to-face brief. The difference lies in setup and delivery considerations, not in the development process itself.",
     "section": "5.0 Effective Presentations"
   },
   {
     "type": "mcq",
-    "question": "Before delivering a virtual presentation, a Senior Enlisted Leader should clear their desktop of non-applicable applications. What is the PRIMARY reason for this action?",
+    "question": "Before delivering a virtual presentation, a Senior Enlisted Leader should clear the desktop of non-applicable applications. What is the PRIMARY reason for this action?",
     "options": [
       "A. To improve the computer's processing speed during the presentation",
       "B. To prevent private information from being exposed during screen sharing",
@@ -187,7 +187,7 @@
     "type": "tf",
     "question": "Impromptu speaking, as practiced at the Senior Enlisted Academy, involves little to no preparation and no notes or manuscript, and is used in classroom and group discussions.",
     "correct": "True",
-    "explanation": "Impromptu speaking is defined as speaking with little to no preparation and no notes or manuscript, on the spot. At the Senior Enlisted Academy, this method is practiced as a classroom and group discussion activity.",
+    "explanation": "Impromptu speaking is defined as speaking on the spot with little to no preparation and no notes or manuscript. At the Senior Enlisted Academy, this method is practiced as a classroom and group discussion activity.",
     "section": "5.0 Effective Presentations"
   },
   {
@@ -200,12 +200,12 @@
       "D. Standing in one fixed position to project confidence and stability"
     ],
     "correct": "B",
-    "explanation": "For extemporaneous speaking, presenters should use numbered note cards for major components and main points, be mindful of body movement, and maintain eye contact of two to four seconds with the audience.",
+    "explanation": "For extemporaneous speaking, presenters should use numbered note cards for major components and main points, be mindful of body movement, and maintain two to four seconds of eye contact with the audience.",
     "section": "5.0 Effective Presentations"
   },
   {
     "type": "mcq",
-    "question": "In the Johari Window, which pane contains information that is known to others but NOT known to the leader themselves?",
+    "question": "In the Johari Window, which pane contains information that is known to others but NOT known to the leader?",
     "options": [
       "A. Public Arena",
       "B. Facade",
@@ -231,7 +231,7 @@
   },
   {
     "type": "tf",
-    "question": "In the Johari Window model, total disclosure of all personal information is the ultimate goal for a leader seeking to shrink their Facade pane.",
+    "question": "In the Johari Window model, total disclosure of all personal information is the ultimate goal for a leader seeking to shrink the Facade pane.",
     "correct": "False",
     "explanation": "Total disclosure is NOT the goal. Time and energy are limited, so disclosure only matters when it genuinely serves the organization, not as a blanket practice.",
     "section": "5.1 Leading with Feedback"
@@ -246,7 +246,7 @@
       "D. Providing frequent feedback and enforcing strict standards"
     ],
     "correct": "B",
-    "explanation": "Radical Candor sits at the intersection of Caring Personally about someone as a human being and Challenging them Directly by honestly stating what you think, delivering hard feedback from a foundation of genuine concern.",
+    "explanation": "Radical Candor sits at the intersection of caring personally about someone as a human being and challenging them directly by honestly stating what you think, delivering hard feedback from a foundation of genuine concern.",
     "section": "5.1 Leading with Feedback"
   },
   {
@@ -284,7 +284,7 @@
   },
   {
     "type": "mcq",
-    "question": "A Situational Leadership model describes four leadership styles matched to four readiness levels. Which style is most appropriate for a follower who is new to a task and lacks both the skills and confidence to perform it?",
+    "question": "The Situational Leadership model describes four leadership styles matched to four readiness levels. Which style is most appropriate for a follower who is new to a task and lacks both the skills and confidence to perform it?",
     "options": [
       "A. S4 - Delegating",
       "B. S3 - Participating",
@@ -297,7 +297,7 @@
   },
   {
     "type": "mcq",
-    "question": "A follower who was previously performing well has recently become less motivated and is beginning to regress in performance. How should a leader adjust their style according to Situational Leadership principles?",
+    "question": "A follower who was previously performing well has recently become less motivated and is beginning to regress in performance. According to Situational Leadership principles, how should a leader adjust their style?",
     "options": [
       "A. Move toward less direction to encourage autonomy",
       "B. Move toward more direction to address the regression",
@@ -343,7 +343,7 @@
   },
   {
     "type": "tf",
-    "question": "The LEAD Self and LEAD Other instruments, when compared, can reveal discrepancies between how a leader sees their own style and how followers, peers, and supervisors actually perceive it.",
+    "question": "When compared, the LEAD Self and LEAD Other instruments can reveal discrepancies between how a leader sees their own style and how followers, peers, and supervisors actually perceive it.",
     "correct": "True",
     "explanation": "LEAD Self captures the leader's self-perception while LEAD Other captures external perceptions. Comparing the two creates the LEAD Profile, which highlights gaps between self-view and reputation \u2014 a key tool for self-awareness.",
     "section": "5.1 Leading with Feedback"
@@ -396,7 +396,7 @@
   },
   {
     "type": "mcq",
-    "question": "A Senior Enlisted Leader's LEAD profile shows a strong preference for S2 (Selling) in nearly every situation, regardless of follower readiness. What risk does this pattern present?",
+    "question": "A Senior Enlisted Leader's LEAD Profile shows a strong preference for S2 (Selling) in nearly every situation, regardless of follower readiness. What risk does this pattern present?",
     "options": [
       "A. The leader will likely over-delegate to highly capable subordinates",
       "B. The leader may fail to provide enough emotional support to followers",
@@ -575,7 +575,7 @@
       "D. When they are tied to formal recognition or reward systems"
     ],
     "correct": "C",
-    "explanation": "A goal is external to the individual and is only effective when it aligns with the person's highest-strength need at that moment. Goals that do not connect to a dominant motive will not effectively drive behavior.",
+    "explanation": "A goal is external to the individual and is effective only when it aligns with the person's highest-strength need at that moment. Goals that do not connect to a dominant motive will not effectively drive behavior.",
     "section": "5.2 Human Behavior"
   },
   {
@@ -595,7 +595,7 @@
       "D. Cognitive dissonance"
     ],
     "correct": "C",
-    "explanation": "Frame of reference is the lens shaped by race, cultural values, gender, life experiences, and education through which a person interprets events. The same situation is read differently because each person's frame of reference is unique.",
+    "explanation": "Frame of reference is the lens \u2014 shaped by race, cultural values, gender, life experiences, and education \u2014 through which a person interprets events. The same situation is read differently because each person's frame of reference is unique.",
     "section": "5.2 Human Behavior"
   },
   {
@@ -667,7 +667,7 @@
       "D. Illusory correlation"
     ],
     "correct": "B",
-    "explanation": "The representativeness heuristic operates on the shorthand 'A is like B.' The leader is assessing a new unit by comparing it to characteristics of a previously failing unit rather than evaluating it on its own merits.",
+    "explanation": "The representativeness heuristic operates on the shorthand 'A is like B.' The leader is assessing a new unit by comparing it to the characteristics of a previously failing unit rather than evaluating it on its own merits.",
     "section": "5.3 Heuristics"
   },
   {
@@ -729,7 +729,7 @@
     "options": [
       "A. A reasoning process that requires concentration, is statistical in nature, and engages only when circumstances demand it",
       "B. A fast, automatic, intuitive process that produces impressions and feelings with little conscious effort",
-      "C. A deliberate analytical method that checks System-2 on occasion to verify its outputs",
+      "C. A deliberate analytical method that occasionally checks System-2 to verify its outputs",
       "D. A step-based linear model designed for stable, well-structured problems"
     ],
     "correct": "B",
@@ -759,14 +759,14 @@
       "D. System-1 engages only when circumstances require it; System-2 is always active"
     ],
     "correct": "C",
-    "explanation": "System-1 is fast, automatic, and intuitive, while System-2 is slow, effortful, and deliberate. System-2 engages only when required and checks in on System-1 on occasion.",
+    "explanation": "System-1 is fast, automatic, and intuitive, while System-2 is slow, effortful, and deliberate. System-2 engages only when required and occasionally checks in on System-1.",
     "section": "5.3 Heuristics"
   },
   {
     "type": "tf",
     "question": "System-2 thinking is always engaged when a person makes a consequential decision.",
     "correct": "False",
-    "explanation": "Many consequential choices are System-1 choices and therefore deviate from the predictions of the standard economic model. System-2 engages only when circumstances require it and does not automatically activate just because a decision is important.",
+    "explanation": "Many consequential choices are System-1 choices and therefore deviate from the predictions of the standard economic model. System-2 engages only when circumstances require it and does not automatically activate simply because a decision is important.",
     "section": "5.3 Heuristics"
   },
   {
@@ -799,7 +799,7 @@
     "type": "tf",
     "question": "Critical thinking is also referred to as 'reflection in action' and is defined as the ability not to be swayed by the first impression produced by fast thinking.",
     "correct": "True",
-    "explanation": "Critical thinking is also called reflection in action and is the ability to not be swayed by the first impression produced by fast thinking. Its guiding idea is to think beyond the first thought.",
+    "explanation": "Critical thinking is also called reflection in action and is the ability not to be swayed by the first impression produced by fast thinking. Its guiding idea is to think beyond the first thought.",
     "section": "5.3 Heuristics"
   },
   {
@@ -879,7 +879,7 @@
     "question": "At the close of a meeting, the Minute Taker reads the record back to the group. What is the primary purpose of this action?",
     "options": [
       "A. To allow the facilitator to correct any decisions the group made incorrectly",
-      "B. To confirm accuracy of recorded decisions, action items, owners, due dates, and next steps",
+      "B. To confirm the accuracy of recorded decisions, action items, owners, due dates, and next steps",
       "C. To give members a chance to re-debate agenda items they disagreed with",
       "D. To provide a summary for members who arrived late to the meeting"
     ],
@@ -983,7 +983,7 @@
     "type": "tf",
     "question": "The Move-Out phase of the conceptual framework focuses on warming up the group and opening the climate so members are ready to contribute.",
     "correct": "False",
-    "explanation": "Warming up the group and opening the climate is the function of the Start-Up phase. Move-Out is the phase where the facilitator maintains momentum, manages the process item by item, and concludes each topic cleanly.",
+    "explanation": "Warming up the group and opening the climate is the function of the Start-Up phase. Move-Out is the phase in which the facilitator maintains momentum, manages the process item by item, and concludes each topic cleanly.",
     "section": "5.4 Facilitating Groups"
   },
   {
@@ -1135,13 +1135,13 @@
     "type": "mcq",
     "question": "Which of the following correctly matches a readiness level with its developmental description?",
     "options": [
-      "A. R2 \u2014 able and confident and willing",
+      "A. R2 \u2014 able, confident, and willing",
       "B. R3 \u2014 unable and insecure or unwilling",
-      "C. R4 \u2014 able and confident and willing",
+      "C. R4 \u2014 able, confident, and willing",
       "D. R1 \u2014 able but insecure or unwilling"
     ],
     "correct": "C",
-    "explanation": "R4 describes a member who is able, confident, and willing \u2014 the highest readiness level, where delegating (S4) is the appropriate leadership style.",
+    "explanation": "R4 describes a member who is able, confident, and willing \u2014 the highest readiness level, where Delegating (S4) is the appropriate leadership style.",
     "section": "6.1 Good Order and Discipline"
   },
   {
@@ -1199,15 +1199,15 @@
   },
   {
     "type": "mcq",
-    "question": "A Sailor's behavior is problematic for the leader but the Sailor does not see it as a problem. Using the problem ownership model, what readiness level applies and which leadership style is most appropriate?",
+    "question": "A Sailor's behavior is problematic for the leader, but the Sailor does not see it as a problem. Using the problem ownership model, what readiness level applies and which leadership style is most appropriate?",
     "options": [
-      "A. R2 \u2014 selling (S2), because the member needs both direction and support to understand the issue",
-      "B. R4 \u2014 delegating (S4), because the leader should let the member resolve it independently",
-      "C. R1 \u2014 telling (S1), because the member does not recognize the problem and needs direct guidance",
-      "D. R3 \u2014 participating (S3), because the member is capable and just needs encouragement"
+      "A. R2 \u2014 Selling (S2), because the member needs both direction and support to understand the issue",
+      "B. R4 \u2014 Delegating (S4), because the leader should let the member resolve it independently",
+      "C. R1 \u2014 Telling (S1), because the member does not recognize the problem and needs direct guidance",
+      "D. R3 \u2014 Participating (S3), because the member is capable and just needs encouragement"
     ],
     "correct": "C",
-    "explanation": "When the leader has the problem but the member does not recognize it, the member's readiness is at R1. The telling style (S1) is appropriate because the member needs direct guidance to understand and correct the behavior.",
+    "explanation": "When the leader has the problem but the member does not recognize it, the member's readiness is at R1. The Telling style (S1) is appropriate because the member needs direct guidance to understand and correct the behavior.",
     "section": "6.1 Good Order and Discipline"
   },
   {
@@ -1233,7 +1233,7 @@
       "D. Management and leadership are interchangeable terms for the same set of activities."
     ],
     "correct": "B",
-    "explanation": "Leadership is the process of influencing others toward a goal and moves people beyond their immediate self-interest to change the organization, while management maintains current operations through supervision, organization, and reward for performance.",
+    "explanation": "Leadership is the process of influencing others toward a goal and moving people beyond their immediate self-interest to change the organization, while management maintains current operations through supervision, organization, and reward for performance.",
     "section": "6.2 Management and Leadership"
   },
   {
@@ -1299,7 +1299,7 @@
       "D. Supervision is unnecessary once a task has been formally delegated."
     ],
     "correct": "C",
-    "explanation": "The level of supervision applied to a delegated task depends on the mission, the circumstances, and the proficiency of the people involved. The situational leadership model guides that balance, meaning no single fixed level of supervision is appropriate for all situations.",
+    "explanation": "The level of supervision applied to a delegated task depends on the mission, the circumstances, and the proficiency of the people involved. The Situational Leadership model guides that balance, meaning no single fixed level of supervision is appropriate for all situations.",
     "section": "6.2 Management and Leadership"
   },
   {
@@ -1416,7 +1416,7 @@
   },
   {
     "type": "mcq",
-    "question": "A senior chief who persists through repeated setbacks on a lengthy deployment, continuing to push the division toward mission completion without being directed to do so, is demonstrating which two motives under drive?",
+    "question": "A Senior Chief who persists through repeated setbacks on a lengthy deployment, continuing to push the division toward mission completion without being directed to do so, is demonstrating which two motives under drive?",
     "options": [
       "A. Ambition and charisma",
       "B. Achievement and flexibility",
@@ -1659,7 +1659,7 @@
   },
   {
     "type": "mcq",
-    "question": "A senior chief has followers with thorough knowledge of a subject and the willingness to act on it. Which decision-making style should the senior chief use?",
+    "question": "A Senior Chief has followers with thorough knowledge of a subject and the willingness to act on it. Which decision-making style should the Senior Chief use?",
     "options": [
       "A. Authoritative",
       "B. Consultative",
@@ -1672,7 +1672,7 @@
   },
   {
     "type": "mcq",
-    "question": "A master chief is working with a newly reporting group of Sailors who have no experience in the specific area requiring a decision. Which decision-making style is most appropriate?",
+    "question": "A Master Chief is working with a newly reporting group of Sailors who have no experience in the specific area requiring a decision. Which decision-making style is most appropriate?",
     "options": [
       "A. Delegative",
       "B. Facilitative",
@@ -1797,9 +1797,9 @@
   },
   {
     "type": "tf",
-    "question": "The facilitative decision-making style is appropriate when followers have quite a bit of experience, allowing the decision-making process to be shared with them.",
+    "question": "The facilitative decision-making style is appropriate when followers have considerable experience, allowing the decision-making process to be shared with them.",
     "correct": "True",
-    "explanation": "The facilitative style matches R3 followers who have quite a bit of experience. At this readiness level, the leader shares the decision-making process with followers rather than retaining full ownership.",
+    "explanation": "The facilitative style matches R3 followers who have considerable experience. At this readiness level, the leader shares the decision-making process with followers rather than retaining full ownership.",
     "section": "7.0 Organizational Decision Making"
   },
   {
@@ -1955,7 +1955,7 @@
   },
   {
     "type": "mcq",
-    "question": "A highly competent and self-confident Sailor at R4 is being influenced most effectively by which power base?",
+    "question": "A highly competent and self-confident Sailor at R4 is most effectively influenced by which power base?",
     "options": [
       "A. Coercive power",
       "B. Legitimate power",
@@ -2054,7 +2054,7 @@
   },
   {
     "type": "mcq",
-    "question": "A unit stands up a temporary group of NCOs to solve a recurring supply accountability problem. Once the problem is resolved, the group will disband. This is best described as what type of team?",
+    "question": "A unit stands up a temporary group of Chief Petty Officers to solve a recurring supply accountability problem. Once the problem is resolved, the group will disband. This is best described as what type of team?",
     "options": [
       "A. Natural work team",
       "B. Self-directed work team",
@@ -2113,14 +2113,14 @@
   },
   {
     "type": "tf",
-    "question": "According to the Laws of organizational change, people resist change itself rather than resisting the act of being changed without their involvement.",
+    "question": "According to the Laws of Organizational Change, people resist change itself rather than resisting the act of being changed without their involvement.",
     "correct": "False",
     "explanation": "The first Law states that 'people don't resist change; they resist being changed.' People dig in when handed an arbitrary mandate. Keeping them involved, communicating regularly, and providing a clear picture of how things will be different wins cooperation.",
     "section": "6.4 Group Dynamics and Effective Teams"
   },
   {
     "type": "mcq",
-    "question": "A senior leader notices a problem with a process and immediately adjusts it without analyzing the root cause. According to the Laws of organizational change, this leader is most likely guilty of:",
+    "question": "A senior leader notices a problem with a process and immediately adjusts it without analyzing the root cause. According to the Laws of Organizational Change, this leader is most likely guilty of:",
     "options": [
       "A. Norming",
       "B. Tampering",
@@ -2128,7 +2128,7 @@
       "D. Floundering"
     ],
     "correct": "B",
-    "explanation": "The Laws of organizational change warn against tampering \u2014 overreacting to a problem without understanding its causes. Tampering typically leads to more variation, higher costs, and more errors rather than genuine improvement.",
+    "explanation": "The Laws of Organizational Change warn against tampering \u2014 overreacting to a problem without understanding its causes. Tampering typically leads to more variation, higher costs, and more errors rather than genuine improvement.",
     "section": "6.4 Group Dynamics and Effective Teams"
   },
   {
@@ -2212,7 +2212,7 @@
   },
   {
     "type": "mcq",
-    "question": "During a team meeting, one member's idea is completely ignored by the rest of the group and the conversation moves on without acknowledging it. This is called:",
+    "question": "During a team meeting, one member's idea is completely ignored by the rest of the group, and the conversation moves on without acknowledging it. This is called:",
     "options": [
       "A. Wanderlust",
       "B. Floundering",
@@ -2461,7 +2461,7 @@
   },
   {
     "type": "mcq",
-    "question": "In the Situational Leadership model, which two styles are identified as the 'risky styles' and why?",
+    "question": "In the Situational Leadership model, which two styles are identified as the 'risky styles,' and why?",
     "options": [
       "A. S2 and S3, because they combine high task and high relationship behaviors",
       "B. S1 and S4, because one is always the lowest-probability choice in most situations",
@@ -2535,7 +2535,7 @@
       "D. Expert power"
     ],
     "correct": "C",
-    "explanation": "Coercive power is the appropriate base for R1 followers because they are low in readiness and need to understand there are consequences for their actions or inactions.",
+    "explanation": "Coercive power is the appropriate base for R1 followers because they are low in readiness and need to understand that there are consequences for their actions or inactions.",
     "section": "6.0 Power Summary",
     "image": "power_bases.png"
   },
@@ -2605,7 +2605,7 @@
   },
   {
     "type": "tf",
-    "question": "According to the Power Bases at Readiness Levels chart, connection power is appropriate for the R1-R2 range because followers at this level are motivated by wanting to avoid sanctions or gain favor with the leader.",
+    "question": "According to the Power Bases at Readiness Levels chart, connection power is appropriate for the R1-R2 range because followers at this level are motivated by a desire to avoid sanctions or gain favor with the leader.",
     "correct": "True",
     "explanation": "Connection power is matched to the R1-R2 range. Followers at this transitional level are influenced by the leader's network and relationships, responding to the potential for gaining favor or avoiding negative consequences.",
     "section": "6.0 Power Summary",
@@ -2635,7 +2635,7 @@
   },
   {
     "type": "mcq",
-    "question": "A staff NCO voluntarily tells her team she struggles with public speaking so they can adjust expectations and offer support. Which Johari Window mechanism is she using, and what is the direct result?",
+    "question": "A Chief Petty Officer voluntarily tells her team she struggles with public speaking so they can adjust expectations and offer support. Which Johari Window mechanism is she using, and what is the direct result?",
     "options": [
       "A. Feedback, which shrinks the Blind Spot",
       "B. Disclosure, which grows the Open Area",
@@ -2715,7 +2715,7 @@
   },
   {
     "type": "mcq",
-    "question": "Using the Radical Candor model, a Senior Enlisted Leader avoids giving critical feedback to a struggling Sailor because she doesn't want to hurt their feelings \u2014 even though she genuinely cares about their success. Which quadrant best describes her behavior?",
+    "question": "Using the Radical Candor model, a Senior Enlisted Leader avoids giving critical feedback to a struggling Sailor because she doesn't want to hurt his feelings \u2014 even though she genuinely cares about his success. Which quadrant best describes her behavior?",
     "options": [
       "A. Radical Candor",
       "B. Ruinous Empathy",
@@ -2743,7 +2743,7 @@
   },
   {
     "type": "mcq",
-    "question": "Using the Radical Candor model, a Chief publicly tears down a junior Sailor's performance in front of the division \u2014 delivering blunt, harsh criticism with no regard for the Sailor's dignity or growth. Which quadrant does this behavior fall into?",
+    "question": "Using the Radical Candor model, a Chief publicly tears down a junior Sailor's performance in front of the division, delivering blunt, harsh criticism with no regard for the Sailor's dignity or growth. Which quadrant does this behavior fall into?",
     "options": [
       "A. Radical Candor",
       "B. Ruinous Empathy",
@@ -2757,7 +2757,7 @@
   },
   {
     "type": "mcq",
-    "question": "Using the Radical Candor framework, a senior NCO neither confronts a subordinate about repeated policy violations nor shows genuine concern for that subordinate's career \u2014 yet complains about the subordinate to peers. Which quadrant captures this behavior?",
+    "question": "Using the Radical Candor framework, a senior Chief Petty Officer neither confronts a subordinate about repeated policy violations nor shows genuine concern for that subordinate's career, yet complains about the subordinate to peers. Which quadrant captures this behavior?",
     "options": [
       "A. Ruinous Empathy",
       "B. Obnoxious Aggression",
@@ -2903,7 +2903,7 @@
   },
   {
     "type": "mcq",
-    "question": "A senior NCO is highly skilled and self-confident. According to the Power Bases at Readiness Levels model, which power base should the leader rely on to most effectively influence this R4 follower?",
+    "question": "A senior Chief Petty Officer is highly skilled and self-confident. According to the Power Bases at Readiness Levels model, which power base should the leader rely on to most effectively influence this R4 follower?",
     "options": [
       "A. Legitimate power",
       "B. Connection power",
@@ -2911,13 +2911,13 @@
       "D. Expert power"
     ],
     "correct": "D",
-    "explanation": "Expert power is the appropriate base for R4 followers. Confident, high-readiness followers are most influenced by a leader's demonstrated knowledge and skill rather than authority or rewards.",
+    "explanation": "Expert power is the appropriate base for R4 followers. Confident, high-readiness followers are most influenced by a leader's demonstrated knowledge and skill rather than by authority or rewards.",
     "section": "6.0 Power Summary",
     "image": "power_bases.png"
   },
   {
     "type": "mcq",
-    "question": "A follower has the skill but lacks confidence or willingness. According to the Power Bases at Readiness Levels model, which readiness level and power base best fits this situation?",
+    "question": "A follower has the skill but lacks confidence or willingness. According to the Power Bases at Readiness Levels model, which readiness level and power base best fit this situation?",
     "options": [
       "A. R2 \u2014 Reward power",
       "B. R4 \u2014 Expert power",
@@ -2967,7 +2967,7 @@
   },
   {
     "type": "tf",
-    "question": "According to the Power Bases at Readiness Levels model, reward power is the appropriate influence base for an R2 follower because they are motivated when they believe improvement will be recognized.",
+    "question": "According to the Power Bases at Readiness Levels model, reward power is the appropriate influence base for an R2 follower because the follower is motivated when they believe improvement will be recognized.",
     "correct": "True",
     "explanation": "Reward power is directly linked to R2 followers. At this readiness level, the follower is developing motivation and responds positively to the belief that their growth and effort will be acknowledged and rewarded.",
     "section": "6.0 Power Summary",
@@ -3096,12 +3096,12 @@
       "D. Empowerment"
     ],
     "correct": "C",
-    "explanation": "Coercive power is a form of position power that relies on the threat of punishment or negative consequences to gain compliance. Using the threat of a negative fitness report evaluation is a direct application of coercive power.",
+    "explanation": "Coercive power is a form of position power that relies on the threat of punishment or negative consequences to gain compliance. Threatening a negative fitness report is a direct application of coercive power.",
     "section": "6.0 Power Summary"
   },
   {
     "type": "tf",
-    "question": "Power operates through perception, meaning that if followers do not believe a leader possesses power, that leader will be unable to effectively use it regardless of their formal authority.",
+    "question": "Power operates through perception, meaning that if followers do not believe a leader possesses power, that leader will be unable to use it effectively regardless of their formal authority.",
     "correct": "True",
     "explanation": "Power functions based on the perception of followers. If Sailors do not believe a leader has the ability to reward, punish, or influence outcomes, the leader's power \u2014 whether positional or personal \u2014 will have little practical effect.",
     "section": "6.0 Power Summary"
